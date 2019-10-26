@@ -21,9 +21,9 @@
             <div class="my-10">
                 <button v-for="(answer, indexb) in question.answers" class="w-full border px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'bg-blue-500 text-white' : '' ">{{answer.ans}}</button>
             </div>
-            <button v-if="index != questions.length-1" @click="goToNext(index)" class="w-full border px-4 py-2 rounded mb-3">Go to next</button>
+            <button v-if="index != questions.length-1" @click="goToNext(index)" class="w-full border px-4 py-2 rounded mb-3">Next</button>
+            <button v-if="index == questions.length-1" @click="goToResults()" class="w-full border px-4 py-2 rounded mb-3">Next</button>
             <button v-if="index != 0" @click="goToPrev(index)" class="text-xs">Go back</button>
-            <button v-if="index == questions.length-1" @click="goToResults()" class="w-full border px-4 py-2 rounded mb-3">Go to next</button>
         </div>
         <div id="answers" class="container h-screen p-10  mx-auto flex flex-col flex-wrap content-center justify-center max-w-3xl">
             <p v-if="tags.length > 0" class="text-2xl">You
