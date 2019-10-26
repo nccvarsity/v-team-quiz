@@ -1,0 +1,207 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <div class="container h-screen p-10">
+            <p>{{ message }}</p>
+            <p>{{ message2 }}</p>
+            <p>{{ message3 }}</p>
+            <button @click="goToNext(-1)" class="bg-transparent hover:bg-blue-500 text-blue-500 border border-blue-500 hover:text-white font-bold py-2 px-4 rounded">Go to next</button>
+        </div> -->
+        <div v-for="(question, index) in questions" :id="'question-'+index" class="container h-screen p-10">
+            <h2 class="text-2xl mb-4">{{question.question}}</h2>
+            <div class="my-10">
+                <button v-for="(answer, indexb) in question.answers" class="w-full border px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'bg-blue-500 text-white' : '' ">{{answer.ans}}</button>
+            </div>
+            <button v-if="index != questions.length-1" @click="goToNext(index)" class="w-full border px-4 py-2 rounded mb-3">Go to next</button>
+            <button v-if="index == questions.length-1" @click="goToResults()" class="w-full border px-4 py-2 rounded mb-3">Go to next</button>
+        </div>
+        <div id="answers" class="container h-screen p-10">
+            <p v-if="tags.length > 0" class="text-2xl">You
+                <span v-for="(tag, index) in tags">{{tag.you}}<span v-if="index != tags.length-1">, </span></span>.
+            </p>
+            <p v-if="teams.length > 0" class="text-2xl">We think these teams will be most blessed if you join them:</p>
+            <ul>
+                <li v-for="team in teams" class="text-xl">{{team}}</li>
+            </ul>
+            <p v-if="tags.length == 0" class="text-2xl">You haven't answered any questions.</p>
+        </div>
+    </div>
+    <!-- <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script> -->
+    <script>
+        var groupBy = function(array, key) {
+            grouped = {}
+            array.forEach(function(item) {
+                if (item[key] in grouped) {
+                    grouped[item[key]].push(item)
+                } else {
+                    grouped[item[key]] = [item]
+                }
+            })
+
+            return grouped
+        }
+        // https://docs.google.com/spreadsheets/d/e/2PACX-1vTxLC2gDcl3J05egvdWgEt9Jgc5BC299444cf9diFbkD3i5eYcWnUjPHsfwysPIL
+        var questionsApi = 'questions.json'
+
+        var tagsApi = 'tags.json'
+
+        var teamsApi = 'teams.json'
+
+        function getQuestions() {
+            return axios.get(questionsApi)
+        }
+
+        function getTags() {
+            return axios.get(tagsApi)
+        }
+
+        function getTeams() {
+            return axios.get(teamsApi)
+        }
+
+        axios.all([getQuestions(), getTags(), getTeams()])
+            .then(axios.spread(function(questionsResp, tagsResp, teamsResp) {
+                // prepare questions
+                questionsResponse = groupBy(questionsResp.data.rows, 'question')
+                questions = Object.keys(questionsResponse)
+                    .map(function(key) {
+                        answers = questionsResponse[key]
+                        return {
+                            question: key,
+                            answers: answers.map(function(answer) {
+                                return {
+                                    ans: answer.answer,
+                                    tag: answer.tag
+                                }
+                            }),
+                            option: 0
+                        }
+                    })
+
+                // prepare teams
+                teamsByTagsGrouped = groupBy(teamsResp.data.rows, 'tag')
+                var teamsByTags = {}
+                Object.keys(teamsByTagsGrouped)
+                    .forEach(function(tag) {
+                        teams = teamsByTagsGrouped[tag]
+                        teamsByTags[tag] = teams.map(function(team) {
+                            return team.team
+                        })
+                    })
+
+                // prepare tags
+                var tagsData = groupBy(tagsResp.data.rows, 'tag')
+                console.log(tagsData)
+
+                // the app
+                new Vue({
+                    el: '#app',
+                    data: {
+                        message: 'Hello Vue!',
+                        message2: 'test',
+                        questions: questions,
+                        counts: []
+                    },
+                    computed: {
+                        message3: function() {
+                            return this.message + this.message2
+                        },
+                        tags: function() {
+                            let total = {}
+                            this.questions.forEach(function(question) {
+                                if (question.option == 0) {
+                                    //nothing
+                                } else if (question.option in total) {
+                                    total[question.option] = total[question.option] + 1
+                                } else {
+                                    total[question.option] = 1
+                                }
+                            })
+
+                            return Object.keys(total).map(function(key) {
+                                return [key, total[key]]
+                            }).sort(function(a, b) {
+                                return b[1] - a[1]
+                            }).map(function(a) {
+                                tagKey = a[0]
+
+                                return tagsData[tagKey][0]
+                            })
+                        },
+                        teams: function() {
+
+                            // find all the possible teams
+                            teams = {}
+                            this.tags.forEach(function(tag) {
+                                tagKey = tag.tag
+                                if (!(tagKey in teamsByTags)) {
+                                    // skip
+                                }
+
+                                teamsByTags[tagKey].forEach(function(team) {
+                                    if (team in teams) {
+                                        teams[team] = teams[team] + 1
+                                    } else {
+                                        teams[team] = 1
+                                    }
+                                })
+                            })
+                            teamsSorted = []
+                            for (team in teams) {
+                                teamsSorted.push([team, teams[team]])
+                            }
+
+                            return teamsSorted
+                                .sort(function(a, b) {
+                                    return b[1] - a[1]
+                                })
+                                .map(function(team) {
+                                    return team[0]
+                                })
+                                .slice(0, 3)
+                        }
+                    },
+                    methods: {
+                        goToNext: function(index) {
+                            nextIndex = index + 1
+                            document.getElementById("question-" + nextIndex).scrollIntoView()
+                        },
+                        goToPrev: function(index) {
+                            nextIndex = index - 1
+                            document.getElementById("question-" + nextIndex).scrollIntoView()
+                        },
+                        selectAns: function(question, tag) {
+                            question.option = tag
+                        },
+                        goToResults: function() {
+                            document.getElementById("answers").scrollIntoView()
+                        }
+                    }
+                })
+            }))
+            .catch(function(error) {
+                console.log(error)
+            })
+    </script>
+</body>
+
+</html>
