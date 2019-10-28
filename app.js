@@ -11,11 +11,11 @@ var groupBy = function(array, key) {
     return grouped
 }
 // https://docs.google.com/spreadsheets/d/e/2PACX-1vTxLC2gDcl3J05egvdWgEt9Jgc5BC299444cf9diFbkD3i5eYcWnUjPHsfwysPIL
-var questionsApi = 'questions.json'
+var questionsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=3&columns=false'
 
-var tagsApi = 'tags.json'
+var tagsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=4&columns=false'
 
-var teamsApi = 'teams.json'
+var teamsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=5&columns=false'
 
 function getQuestions() {
     return axios.get(questionsApi)
