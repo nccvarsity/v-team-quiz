@@ -10,6 +10,27 @@ var groupBy = function(array, key) {
 
     return grouped
 }
+
+// https://stackoverflow.com/a/2450976
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
 // https://docs.google.com/spreadsheets/d/e/2PACX-1vTxLC2gDcl3J05egvdWgEt9Jgc5BC299444cf9diFbkD3i5eYcWnUjPHsfwysPIL
 var questionsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=3&columns=false'
 
@@ -40,12 +61,12 @@ axios.all([getQuestions(), getTags(), getTeams()])
                 answers = questionsResponse[key]
                 return {
                     question: key,
-                    answers: answers.map(function(answer) {
+                    answers: shuffle(answers.map(function(answer) {
                         return {
                             ans: answer.answer,
                             tag: answer.tag
                         }
-                    }),
+                    })),
                     option: 0
                 }
             })
