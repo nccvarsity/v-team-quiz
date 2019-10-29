@@ -29,6 +29,8 @@ function getTeams() {
     return axios.get(teamsApi)
 }
 
+var test
+
 axios.all([getQuestions(), getTags(), getTeams()])
     .then(axios.spread(function(questionsResp, tagsResp, teamsResp) {
         // prepare questions
@@ -63,16 +65,16 @@ axios.all([getQuestions(), getTags(), getTeams()])
         var tagsData = groupBy(tagsResp.data.rows, 'tag')
 
         // the app
-        new Vue({
-            el: '#quiz',
+        test = new Vue({
+            el: '#app',
             data: {
                 questions: questions,
-                name: '',
+                name,
             },
             mounted: function() {
                 document.getElementById("loading-btn").classList.add('hidden')
-                document.getElementById("start-btn").classList.remove('hidden')
-                this.$el.classList.remove('hidden')
+                document.getElementById("start").classList.remove('hidden')
+                document.getElementById("quiz").classList.remove('hidden')
             },
             computed: {
                 tags: function() {
