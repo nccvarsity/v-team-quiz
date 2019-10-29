@@ -15,8 +15,32 @@
 </head>
 
 <body>
-    <div id="app">
-        <div v-for="(question, index) in questions" :id="'question-'+index" class="container h-screen p-10 mx-auto flex flex-col flex-wrap content-center justify-center max-w-3xl">
+    <div id="loading" class="container h-screen flex flex-col p-10 mx-auto max-w-3xl">
+        <!-- Varsity logo written (not drawn) in SVG! The lines are 5:7:1:7. -->
+        <svg viewbox="0 0 270 380" class="block max-w-full mx-auto mb-10" width="135" height="190">
+            <style>
+                polygon {
+                    fill: none;
+                    stroke: black;
+                    stroke-width: 10px;
+                }
+            </style>
+            <polygon points="10 10 260 10 160 374.0054944640259 110 374.0054944640259"></polygon>
+        </svg>
+        <h1 class="text-center text-2xl">Quiz Working Title</h1>
+        <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Duis nec sapien ut lacus aliquet convallis a nec erat.
+            Nullam pellentesque odio at augue gravida, feugiat malesuada felis elementum.
+            Nulla lorem felis, tempor inelementum vel,
+            euismod ac dolor. Sed eleifend auctor velit, et suscipit massa vulputate sed.
+        </p>
+        <h2 class="text-2xl mb-4">What's your name?</h2>
+        <input type="text" v-model="name" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-5" autofocus />
+        <div id="loading-btn" class="w-full border px-4 py-2 rounded mb-3 cursor-not-allowed opacity-50 bg-blue-500 text-white text-center">Loading</div>
+        <a href="#quiz" id="start-btn" class="hidden w-full border px-4 py-2 rounded mb-3 bg-blue-500 text-white text-center">Let's begin!</a>
+    </div>
+    <div id="quiz" class="hidden">
+        <div v-for="(question, index) in questions" :id="'question-'+index" class="container h-screen p-10  mx-auto flex flex-col max-w-3xl">
             <h2 class="text-2xl mb-4">{{question.question}}</h2>
             <div class="my-10">
                 <button v-for="(answer, indexb) in question.answers" class="w-full border px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'bg-blue-500 text-white' : '' ">{{answer.ans}}</button>
@@ -25,14 +49,20 @@
             <button v-if="index == questions.length-1" @click="goToResults()" class="w-full border px-4 py-2 rounded mb-3">Next</button>
             <button v-if="index != 0" @click="goToPrev(index)" class="text-xs">Go back</button>
         </div>
-        <div id="answers" class="container h-screen p-10  mx-auto flex flex-col flex-wrap content-center justify-center max-w-3xl">
-            <p v-if="tags.length > 0" class="text-2xl">You
-                <span v-for="(tag, index) in tags">{{tag.you}}<span v-if="index != tags.length-1">, </span></span>.
-            </p>
-            <p v-if="teams.length > 0" class="text-2xl">We think these teams will be most blessed if you join them:</p>
-            <ul>
-                <li v-for="team in teams" class="text-xl">{{team}}</li>
-            </ul>
+        <div id="answers" class="container h-screen p-10  mx-auto flex flex-col max-w-3xl">
+            <div v-if="tags.length > 0">
+                <p class="text-xl p-5 bg-gray-200 mb-10">You
+                    <span v-for="(tag, index) in tags">{{tag.you}}<span v-if="index != tags.length-1">, </span></span>.
+                </p>
+                <div class="bg-gray-200 p-5">
+                    <h2 v-if="teams.length > 0" class="text-2xl">We think these teams will be most blessed if you join them:</h2>
+                    <ul>
+                        <li v-for="team in teams" class="text-xl">
+                            <a href="#" target="_blank" class="block border border-solid px-4 py-2 my-2 bg-gray-400">{{team}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <p v-if="tags.length == 0" class="text-2xl">You haven't answered any questions.</p>
         </div>
     </div>

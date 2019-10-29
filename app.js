@@ -61,21 +61,20 @@ axios.all([getQuestions(), getTags(), getTeams()])
 
         // prepare tags
         var tagsData = groupBy(tagsResp.data.rows, 'tag')
-        console.log(tagsData)
 
         // the app
         new Vue({
-            el: '#app',
+            el: '#quiz',
             data: {
-                message: 'Hello Vue!',
-                message2: 'test',
                 questions: questions,
-                counts: []
+                name: '',
+            },
+            mounted: function() {
+                document.getElementById("loading-btn").classList.add('hidden')
+                document.getElementById("start-btn").classList.remove('hidden')
+                this.$el.classList.remove('hidden')
             },
             computed: {
-                message3: function() {
-                    return this.message + this.message2
-                },
                 tags: function() {
                     let total = {}
                     this.questions.forEach(function(question) {
