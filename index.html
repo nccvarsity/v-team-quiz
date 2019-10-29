@@ -54,7 +54,7 @@
             </div>
             <div id="answers" class="container h-screen p-10  mx-auto flex flex-col max-w-3xl">
                 <div v-if="tags.length > 0">
-                    <div class=" p-5 bg-gray-200 mb-10">
+                    <div class=" p-5 bg-gray-200 mb-4">
                         <h1 class="text-xl font-semibold">Hey {{name}}!</h1>
                         <p class="text-xl">You
                             <span v-for="(tag, index) in tags">{{tag.you}}<span v-if="index != tags.length-1">, </span></span>.
@@ -66,8 +66,12 @@
                             </li>
                         </ul>
                     </div>
+                    <p class="text-xs">Quiz designed by <a href="https://thezone.newcreation.org.sg/varsity" class="underline" target="_blank">Team Varsity</a>, handcrafted by <a href="https://www.github.com/nccvarsity" class="underline" target="_blank">VCoders</a></p>
                 </div>
-                <p v-if="tags.length == 0" class="text-2xl">You haven't answered any questions.</p>
+                <div v-if="tags.length == 0">
+                    <p class="text-2xl mb-10">You haven't answered any questions.</p>
+                    <a href="#quiz" class="block w-full border px-4 py-2 rounded mb-3 bg-blue-500 text-white text-center">Go try some questions!</a>
+                </div>
             </div>
         </div>
     </div>
