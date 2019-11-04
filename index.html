@@ -36,7 +36,17 @@
         }
 
         .w-almost-1\/2 {
-            width: 47%;
+            width: 49%;
+        }
+
+        .h-almost-1\/2 {
+            height: 49%;
+        }
+
+        .square:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
         }
 
         polygon {
@@ -73,9 +83,9 @@
                 <h2 class="text-2xl">{{question.question}}</h2>
                 <p v-if="question.hasImages" class="text-xs">(Choose an image)</p>
                 <div class="answers my-10" :class="question.hasImages ? 'flex flex-wrap justify-between' : ''">
-                    <div v-for="(answer, indexb) in question.answers" :class="question.hasImages ? 'w-almost-1/2 h-40 border rounded-lg mb-5' : ''">
+                    <div v-for="(answer, indexb) in question.answers" :class="question.hasImages ? 'w-almost-1/2 square border rounded-lg relative mb-2' : ''">
                         <button v-if="!answer.imageurl" class="w-full border px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'bg-accent text-secondary' : 'bg-secondary text-primary' ">{{answer.ans}}</button>
-                        <img v-if="answer.imageurl" :src="answer.imageurl" class="object-cover w-full h-full cursor-pointer rounded-lg" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'border-4 border-yellow-500' : '' " />
+                        <img v-if="answer.imageurl" :src="answer.imageurl" class="object-cover w-full h-full cursor-pointer rounded-lg absolute" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'border-4 border-yellow-500' : '' " />
                     </div>
                 </div>
                 <button v-if="index != questions.length-1" @click="goToNext(index)" class="w-full border px-4 py-2 rounded mb-3 bg-secondary text-primary">Next</button>
