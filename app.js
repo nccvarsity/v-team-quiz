@@ -57,14 +57,23 @@ axios.all([getQuestions(), getTags(), getTeams()])
         questions = Object.keys(questionsResponse)
             .map(function(key) {
                 answers = questionsResponse[key]
+                imagesCount = 0;
+                answers.forEach(function(answer){
+                    if(answer.imageurl) {
+                        imagesCount++
+                    }
+                })
+
                 return {
                     question: key,
                     answers: shuffle(answers.map(function(answer) {
                         return {
                             ans: answer.answer,
-                            tag: answer.tag
+                            tag: answer.tag,
+                            imageurl: answer.imageurl
                         }
                     })),
+                    hasImages: imagesCount > 0,
                     option: 0
                 }
             })
