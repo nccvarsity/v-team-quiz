@@ -8,14 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Place favicon.ico in the root directory -->
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
     <style>
+        body {
+            background: #5795F8;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .bg-accent {
+            background: #FEC93D;
+        }
+
+        .bg-secondary {
+            background: #0071EB;
+        }
+
+        .text-primary, h1, h2, p {
+            color: white;
+        }
+
+        .text-secondary {
+            color: #243257;
+        }
+
         polygon {
             fill: none;
-            stroke: black;
+            stroke: #243257;
             stroke-width: 10px;
         }
     </style>
@@ -28,33 +50,33 @@
             <svg viewbox="0 0 270 380" class="block max-w-full mx-auto mb-10" width="135" height="190">
                 <polygon points="10 10 260 10 160 374.0054944640259 110 374.0054944640259"></polygon>
             </svg>
-            <h1 class="text-center text-2xl">Quiz Working Title</h1>
+            <h1 class="text-center text-2xl">Martha Bridge Gifting Test</h1>
             <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Duis nec sapien ut lacus aliquet convallis a nec erat.
                 Nullam pellentesque odio at augue gravida, feugiat malesuada felis elementum.
                 Nulla lorem felis, tempor inelementum vel,
                 euismod ac dolor. Sed eleifend auctor velit, et suscipit massa vulputate sed.
             </p>
-            <div id="loading-btn" class="mt-24 w-full border px-4 py-2 rounded mb-3 cursor-not-allowed opacity-50 bg-blue-500 text-white text-center">Loading</div>
+            <div id="loading-btn" class="mt-24 w-full border px-4 py-2 rounded mb-3 cursor-not-allowed opacity-80 bg-accent text-secondary text-center">Loading</div>
             <div id="start" class="hidden">
                 <h2 class="text-2xl mb-4">What's your name?</h2>
                 <input type="text" v-model="name" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-5" autofocus />
-                <a href="#quiz" class="block w-full border px-4 py-2 rounded mb-3 bg-blue-500 text-white text-center">Let's begin!</a>
+                <a href="#quiz" class="block w-full border px-4 py-2 rounded mb-3 bg-accent text-secondary text-center">Let's begin!</a>
             </div>
         </div>
         <div id="quiz" class="hidden">
             <div v-for="(question, index) in questions" :id="'question-'+index" class="container h-screen p-10  mx-auto flex flex-col max-w-3xl">
                 <h2 class="text-2xl mb-4">{{question.question}}</h2>
                 <div class="my-10">
-                    <button v-for="(answer, indexb) in question.answers" class="w-full border px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'bg-blue-500 text-white' : '' ">{{answer.ans}}</button>
+                    <button v-for="(answer, indexb) in question.answers" class="w-full border px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'bg-accent text-secondary' : 'bg-secondary text-primary' ">{{answer.ans}}</button>
                 </div>
-                <button v-if="index != questions.length-1" @click="goToNext(index)" class="w-full border px-4 py-2 rounded mb-3">Next</button>
-                <button v-if="index == questions.length-1" @click="goToResults()" class="w-full border px-4 py-2 rounded mb-3">Next</button>
-                <button v-if="index != 0" @click="goToPrev(index)" class="text-xs">Go back</button>
+                <button v-if="index != questions.length-1" @click="goToNext(index)" class="w-full border px-4 py-2 rounded mb-3 bg-secondary text-primary">Next</button>
+                <button v-if="index == questions.length-1" @click="goToResults()" class="w-full border px-4 py-2 rounded mb-3 bg-secondary text-primary">Next</button>
+                <button v-if="index != 0" @click="goToPrev(index)" class="text-xs text-primary">Go back</button>
             </div>
             <div id="answers" class="container h-screen p-10  mx-auto flex flex-col max-w-3xl">
                 <div v-if="tags.length > 0">
-                    <div class=" p-5 bg-gray-200 mb-4">
+                    <div class="">
                         <h1 class="text-xl font-semibold">Hey {{name}}!</h1>
                         <p class="text-xl">You
                             <span v-for="(tag, index) in tags">{{tag.you}}<span v-if="index != tags.length-1">, </span></span>.
@@ -62,11 +84,12 @@
                         <h2 v-if="teams.length > 0" class="text-xl my-6">We think these teams will be most blessed if you join them:</h2>
                         <ul>
                             <li v-for="team in teams" class="text-xl">
-                                <a href="#" target="_blank" class="block border border-solid px-4 py-2 my-2 bg-gray-400">{{team}}</a>
+                                <a href="#" target="_blank" class="block border border-solid px-4 py-2 my-2 bg-accent">{{team}}</a>
                             </li>
                         </ul>
                     </div>
-                    <p class="text-xs">Quiz designed by <a href="https://thezone.newcreation.org.sg/varsity" class="underline" target="_blank">Team Varsity</a>, handcrafted by <a href="https://www.github.com/nccvarsity" class="underline" target="_blank">VCoders</a></p>
+                    <p class="text-xs">Quiz designed by <a href="https://thezone.newcreation.org.sg/varsity" class="underline" target="_blank">Team Varsity</a>, handcrafted by <a href="https://www.github.com/nccvarsity" class="underline" target="_blank">V
+                            Coders</a></p>
                 </div>
                 <div v-if="tags.length == 0">
                     <p class="text-2xl mb-10">You haven't answered any questions.</p>
