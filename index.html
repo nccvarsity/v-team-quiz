@@ -79,7 +79,7 @@
             </div>
         </div>
         <div id="quiz" class="hidden">
-            <div v-for="(question, index) in questions" :id="'question-'+index" class="container h-screen p-10 mx-auto flex flex-col max-w-3xl">
+            <div v-for="(question, index) in questions" :id="'question-'+index" class="container min-h-screen p-10 mx-auto flex flex-col max-w-3xl">
                 <h2 class="text-2xl">{{question.question}}</h2>
                 <p v-if="question.hasImages" class="text-xs">(Choose an image)</p>
                 <div class="answers my-10" :class="question.hasImages ? 'flex flex-wrap justify-between' : ''">
