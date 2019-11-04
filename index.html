@@ -101,7 +101,7 @@
                         </p>
                         <h2 v-if="teams.length > 0" class="text-xl my-6">We think these teams will be most blessed if you join them:</h2>
                         <div v-for="(team, index) in teams" class="border border-solid px-4 py-2 my-2 bg-accent">
-                            <div class="font-bold block flex flex-wrap justify-between text-xl" @click="openTeam(index)">
+                            <div class="font-bold block flex flex-wrap justify-between items-center text-xl" @click="openTeam(index)">
                                 {{team}}
                                 <svg v-if="teamOpened != index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-6 h-6 ml-2">
                                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
