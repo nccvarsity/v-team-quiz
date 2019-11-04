@@ -96,15 +96,29 @@
                 <div v-if="tags.length > 0">
                     <div class="">
                         <h1 class="text-xl font-semibold">Hey {{name ? name : 'there'}}!</h1>
-                        <p class="text-xl">You
-                            <span v-for="(tag, index) in tags">{{tag.you}}<span v-if="index != tags.length-1">, </span></span>.
+                        <p class="text-l">
+                            <span v-for="(tag, index) in tags">You {{tag.you}}. </span>
                         </p>
                         <h2 v-if="teams.length > 0" class="text-xl my-6">We think these teams will be most blessed if you join them:</h2>
-                        <ul>
-                            <li v-for="team in teams" class="text-xl">
-                                <a href="#" target="_blank" class="block border border-solid px-4 py-2 my-2 bg-accent">{{team}}</a>
-                            </li>
-                        </ul>
+                        <div v-for="(team, index) in teams" class="border border-solid px-4 py-2 my-2 bg-accent">
+                            <div class="font-bold block flex flex-wrap justify-between text-xl" @click="openTeam(index)">
+                                {{team}}
+                                <svg v-if="teamOpened != index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-6 h-6 ml-2">
+                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                                <svg v-if="teamOpened == index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-6 h-6 ml-2">
+                                    <path d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z" />
+                                </svg>
+                            </div>
+                            <div :class="teamOpened == index ? 'block' : 'hidden'">
+                                <p class="text-gray-900 my-2 text-s">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Curabitur eget imperdiet tellus, non egestas dui.
+                                    Donec sed sagittis nisi, et vehicula ligula.
+                                    Pellentesque metus mauris, sagittis eu nisi quis, lobortis
+                                    tristique magna.</p>
+                                <a href="#" class="bg-secondary block border border-solid py-2 px-4 text-white rounded-lg cursor-pointer mb-2">Join {{team}} Now!</a>
+                            </div>
+                        </div>
                     </div>
                     <p class="text-xs">Quiz designed by <a href="https://thezone.newcreation.org.sg/varsity" class="underline" target="_blank">Team Varsity</a>, handcrafted by <a href="https://www.github.com/nccvarsity" class="underline" target="_blank">V
                             Coders</a></p>

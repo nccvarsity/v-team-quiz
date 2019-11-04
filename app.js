@@ -97,7 +97,8 @@ axios.all([getQuestions(), getTags(), getTeams()])
             el: '#app',
             data: {
                 questions: questions,
-                name,
+                name: '',
+                teamOpened: null,
             },
             mounted: function() {
                 document.getElementById("loading-btn").classList.add('hidden')
@@ -177,6 +178,13 @@ axios.all([getQuestions(), getTags(), getTeams()])
                 },
                 goToResults: function() {
                     document.getElementById("answers").scrollIntoView()
+                },
+                openTeam: function(index) {
+                    if(this.teamOpened == index) {
+                        this.teamOpened = null
+                    } else {
+                        this.teamOpened = index;
+                    }
                 }
             }
         })
