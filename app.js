@@ -1,4 +1,4 @@
-var groupBy = function(array, key) {
+function groupBy(array, key) {
     grouped = {}
     array.forEach(function(item) {
         if (item[key] in grouped) {
@@ -50,8 +50,6 @@ function getTeams() {
     return axios.get(teamsApi)
 }
 
-var test
-
 axios.all([getQuestions(), getTags(), getTeams()])
     .then(axios.spread(function(questionsResp, tagsResp, teamsResp) {
         // prepare questions
@@ -86,7 +84,7 @@ axios.all([getQuestions(), getTags(), getTeams()])
         var tagsData = groupBy(tagsResp.data.rows, 'tag')
 
         // the app
-        test = new Vue({
+        new Vue({
             el: '#app',
             data: {
                 questions: questions,
@@ -101,7 +99,7 @@ axios.all([getQuestions(), getTags(), getTeams()])
                 tags: function() {
                     let total = {}
                     this.questions.forEach(function(question) {
-                        if (question.option == 0) {
+                        if (question.option == 0 || question.option == 'No Tag') {
                             //nothing
                         } else if (question.option in total) {
                             total[question.option] = total[question.option] + 1
@@ -124,7 +122,10 @@ axios.all([getQuestions(), getTags(), getTeams()])
 
                     // find all the possible teams
                     teams = {}
-                    this.tags.forEach(function(tag) {
+                    this.tags.filter(function(tag){
+                        return tag.tag != 'No Tag'
+                    })
+                    .forEach(function(tag) {
                         tagKey = tag.tag
                         if (!(tagKey in teamsByTags)) {
                             // skip
