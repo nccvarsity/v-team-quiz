@@ -33,10 +33,9 @@ function shuffle(array) {
 
 // https://docs.google.com/spreadsheets/d/e/2PACX-1vTxLC2gDcl3J05egvdWgEt9Jgc5BC299444cf9diFbkD3i5eYcWnUjPHsfwysPIL
 var questionsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=3&columns=false'
-
 var tagsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=4&columns=false'
-
-var teamsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=5&columns=false'
+var teamTagsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=5&columns=false'
+var teamsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=6&columns=false'
 
 function getQuestions() {
     return axios.get(questionsApi)
@@ -46,12 +45,16 @@ function getTags() {
     return axios.get(tagsApi)
 }
 
+function getTeamTags() {
+    return axios.get(teamTagsApi)
+}
+
 function getTeams() {
     return axios.get(teamsApi)
 }
 
-axios.all([getQuestions(), getTags(), getTeams()])
-    .then(axios.spread(function(questionsResp, tagsResp, teamsResp) {
+axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
+    .then(axios.spread(function(questionsResp, tagsResp, teamTagsResp, teamsResp) {
         // prepare questions
         questionsResponse = groupBy(questionsResp.data.rows, 'question')
         questions = Object.keys(questionsResponse)
@@ -80,7 +83,7 @@ axios.all([getQuestions(), getTags(), getTeams()])
             })
 
         // prepare teams
-        teamsByTagsGrouped = groupBy(teamsResp.data.rows, 'tag')
+        teamsByTagsGrouped = groupBy(teamTagsResp.data.rows, 'tag')
         var teamsByTags = {}
         Object.keys(teamsByTagsGrouped)
             .forEach(function(tag) {
@@ -89,6 +92,8 @@ axios.all([getQuestions(), getTags(), getTeams()])
                     return team.team
                 })
             })
+
+        var teamsData = groupBy(teamsResp.data.rows, 'team')
 
         // prepare tags
         var tagsData = groupBy(tagsResp.data.rows, 'tag')
@@ -163,6 +168,9 @@ axios.all([getQuestions(), getTags(), getTeams()])
                             return team[0]
                         })
                         .slice(0, 3)
+                        .map(function(team) {
+                            return teamsData[team][0]
+                        })
                 }
             },
             methods: {
