@@ -74,7 +74,8 @@ axios.all([getQuestions(), getTags(), getTeams()])
                         }
                     })),
                     hasImages: imagesCount > 0,
-                    option: 0
+                    option: 0,
+                    selection: null
                 }
             })
 
@@ -173,8 +174,9 @@ axios.all([getQuestions(), getTags(), getTeams()])
                     nextIndex = index - 1
                     document.getElementById("question-" + nextIndex).scrollIntoView()
                 },
-                selectAns: function(question, tag) {
+                selectAns: function(question, tag, index) {
                     question.option = tag
+                    question.selection = index
                 },
                 goToResults: function() {
                     document.getElementById("answers").scrollIntoView()

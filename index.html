@@ -84,8 +84,8 @@
                 <p v-if="question.hasImages" class="text-xs">(Choose an image)</p>
                 <div class="answers my-10" :class="question.hasImages ? 'flex flex-wrap justify-between' : ''">
                     <div v-for="(answer, indexb) in question.answers" :class="question.hasImages ? 'w-almost-1/2 square border rounded-lg relative mb-2' : ''">
-                        <button v-if="!answer.imageurl" class="w-full border px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'bg-accent text-secondary' : 'bg-secondary text-primary' ">{{answer.ans}}</button>
-                        <img v-if="answer.imageurl" :src="answer.imageurl" class="object-cover w-full h-full cursor-pointer rounded-lg absolute" @click="selectAns(question, answer.tag)" :class="answer.tag == question.option? 'border-4 border-yellow-500' : '' " />
+                        <button v-if="!answer.imageurl" class="w-full border px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'bg-accent text-secondary' : 'bg-secondary text-primary' ">{{answer.ans}}</button>
+                        <img v-if="answer.imageurl" :src="answer.imageurl" class="object-cover w-full h-full cursor-pointer rounded-lg absolute" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'border-4 border-yellow-500' : '' " />
                     </div>
                 </div>
                 <button v-if="index != questions.length-1" @click="goToNext(index)" class="w-full border px-4 py-2 rounded mb-3 bg-secondary text-primary">Next</button>
