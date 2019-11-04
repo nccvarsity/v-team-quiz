@@ -77,7 +77,7 @@
             <div id="answers" class="container h-screen p-10  mx-auto flex flex-col max-w-3xl">
                 <div v-if="tags.length > 0">
                     <div class="">
-                        <h1 class="text-xl font-semibold">Hey {{name}}!</h1>
+                        <h1 class="text-xl font-semibold">Hey {{name ? name : 'there'}}!</h1>
                         <p class="text-xl">You
                             <span v-for="(tag, index) in tags">{{tag.you}}<span v-if="index != tags.length-1">, </span></span>.
                         </p>
