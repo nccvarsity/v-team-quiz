@@ -182,9 +182,10 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
                     })
                 },
                 teamOthers: function() {
+                    teamsChosen = this.teams
                     return teamsResp.data.rows
                     .filter(function(team){
-                        return !(team.team in this.teams)
+                        return !teamsChosen.includes(team.team)
                     })
                 }
             },
