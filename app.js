@@ -130,8 +130,10 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
                         return b[1] - a[1]
                     }).map(function(a) {
                         tagKey = a[0]
+                        tagResult = tagsData[tagKey][0]
+                        tagResult['score'] = total[tagKey]
 
-                        return tagsData[tagKey][0]
+                        return tagResult
                     })
                 },
                 teams: function() {
@@ -149,9 +151,9 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
 
                         teamsByTags[tagKey].forEach(function(team) {
                             if (team in teams) {
-                                teams[team] = teams[team] + 1
+                                teams[team] = teams[team] + tag.score
                             } else {
-                                teams[team] = 1
+                                teams[team] = tag.score
                             }
                         })
                     })
