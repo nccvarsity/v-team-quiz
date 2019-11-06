@@ -196,7 +196,7 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
                     question.selection = index
                 },
                 goToResults: function() {
-                    document.getElementById("answers").scrollIntoView()
+                    document.getElementById("results").scrollIntoView()
                 },
                 openTeam: function(index) {
                     if(this.teamOpened == index) {
