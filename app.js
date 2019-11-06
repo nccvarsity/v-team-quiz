@@ -136,6 +136,10 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
                         return tagResult
                     })
                 },
+                tagResults: function() {
+                    return this.tags
+                    .slice(0, 4)
+                },
                 teams: function() {
 
                     // find all the possible teams

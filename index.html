@@ -116,7 +116,7 @@
                     <div class="">
                         <h1 class="text-xl font-semibold">Hey {{name ? name : 'there'}}!</h1>
                         <p class="text-l">
-                            <span v-for="(tag, index) in tags">You {{tag.you}}. </span>
+                            <span v-for="(tag, index) in tagResults">You {{tag.you}}. </span>
                         </p>
                         <h2 v-if="teamResults.length > 0" class="text-xl my-6">We think these teams will be most blessed if you join them:</h2>
                         <div v-for="(team, index) in teamResults" class="border border-solid border-black px-4 py-2 my-2">
