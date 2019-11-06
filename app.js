@@ -168,9 +168,18 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
                             return team[0]
                         })
                         .slice(0, 3)
-                        .map(function(team) {
-                            return teamsData[team][0]
-                        })
+                },
+                teamResults: function() {
+                    return this.teams
+                    .map(function(team) {
+                        return teamsData[team][0]
+                    })
+                },
+                teamOthers: function() {
+                    return teamsResp.data.rows
+                    .filter(function(team){
+                        return !(team.team in this.teams)
+                    })
                 }
             },
             methods: {
