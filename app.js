@@ -208,6 +208,9 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
                 },
                 goToResults: function() {
                     document.getElementById("results").scrollIntoView()
+                    this.teams.forEach(function(team){
+                        ga('send','event','Quiz','Result Team',team.team+'-1')
+                    })
                 },
                 openTeam: function(index) {
                     if(this.teamOpened == index) {
