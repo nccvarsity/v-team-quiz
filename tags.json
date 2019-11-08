@@ -1,7 +1,7 @@
 {
     "rows": [{
         "tag": "Behind",
-        "you": "care more about the big picture and would love to see what goes on behind-the-scenes"
+        "you": "care about the big picture and would love to see what goes on behind-the-scenes"
     }, {
         "tag": "Front-facing",
         "you": "are outgoing and comfortable meeting new people"
@@ -10,27 +10,27 @@
         "you": "love people and are ready to speak life into someone else’s situation"
     }, {
         "tag": "Observant",
-        "you": "notice things quickly and react accordingly"
+        "you": "notice things that others wouldn't normally notice"
     }, {
         "tag": "Detailed",
         "you": "look into the intricacies of things and often spot the gaps that need to be filled"
-    }, {
-        "tag": "Serve at VN",
-        "you": "would like to serve at VNs"
     }, {
         "tag": "Creative",
         "you": "see everything you do as a canvas for expression and exploration"
     }, {
         "tag": "Structured/Planning",
-        "you": "see the value that plans and structures help to create clarity and order"
+        "you": "know that although the LORD directs your steps, that doesn't stop you from having a plan"
     }, {
         "tag": "Go with the flow/Adaptable",
-        "you": "are spontaneous and are completely fine when changes occur"
+        "you": "are fluid like water, able to flow wherever it needs to go"
     }, {
         "tag": "Calm under pressure",
-        "you": "do not see when heat cometh, the coolest cucumber in NTUC"
+        "you": "do not see when heat cometh, you're the coolest cucumber in NTUC"
     }, {
         "tag": "Coffee",
-        "you": "see coffee as a perk-me-up and want to share it with the world"
+        "you": "want to share your love for coffee with the world"
+    }, {
+        "tag": "No Tag",
+        "you": 0
     }]
 }

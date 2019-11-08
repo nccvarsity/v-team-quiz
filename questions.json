@@ -1,131 +1,357 @@
 {
     "rows": [{
-        "question": "The picture that describes me the most is... ",
-        "answer": "Abstract art ",
-        "tag": "Front-facing"
+        "key": 0,
+        "question": "Me playing Jenga:",
+        "answer": "Calm, poised zen like",
+        "tag": "Calm under pressure",
+        "imageurl": "https://media.giphy.com/media/Wum3xN8DvquIw/giphy.gif"
     }, {
-        "question": "The picture that describes me the most is... ",
-        "answer": "Structured looking painting ",
-        "tag": "Creative"
+        "key": 0,
+        "question": "Me playing Jenga:",
+        "answer": "Freaking Out",
+        "tag": "No Tag",
+        "imageurl": "https://media.giphy.com/media/9GJ2pJZjSBs9V7RxVX/giphy.gif"
     }, {
-        "question": "The picture that describes me the most is... ",
-        "answer": "Colour but neat painting ",
-        "tag": "Structured/Planning"
+        "key": 0,
+        "question": "Me at a social gathering:",
+        "answer": "sheldon anxiety gif",
+        "tag": "Behind",
+        "imageurl": "https://media.giphy.com/media/Rpf6p54DttJEk/giphy.gif"
     }, {
-        "question": "The picture that describes me the most is... ",
-        "answer": "Black and white painting ",
-        "tag": "Calm under pressure"
+        "key": 0,
+        "question": "Me at a social gathering:",
+        "answer": "Door Greeter",
+        "tag": "Front-facing",
+        "imageurl": "https://media.giphy.com/media/4VlbCwmZlV2U0/giphy.gif"
     }, {
-        "question": "My handwriting usually looks like (choose from pictures)",
-        "answer": "Readable, what matters is the content",
-        "tag": "Detailed"
+        "key": 0,
+        "question": "Me at a social gathering:",
+        "answer": "People Watching",
+        "tag": "Observant",
+        "imageurl": "https://media.giphy.com/media/SYABnw07wJsV7G8ju5/giphy.gif"
     }, {
-        "question": "My handwriting usually looks like (choose from pictures)",
-        "answer": "Completely not on the lines ",
-        "tag": "Creative"
+        "key": 0,
+        "question": "Me at a social gathering:",
+        "answer": "Free Flow Dancing",
+        "tag": "Creative",
+        "imageurl": "https://media.giphy.com/media/d9r0mMnFYmq7S/giphy.gif"
     }, {
-        "question": "My handwriting usually looks like (choose from pictures)",
-        "answer": "V neat penmanship type ",
-        "tag": "Calm under pressure"
+        "key": "Choose the one that describes you most accurately:/Observant",
+        "question": "Choose the one that describes you most accurately:",
+        "answer": "You're usually the first few to notice when your friend has a new haircut/new clothes/new bag etc. ",
+        "tag": "Observant",
+        "imageurl": 0
     }, {
-        "question": "My handwriting usually looks like (choose from pictures)",
-        "answer": "Messy because I love writing for many people",
-        "tag": "Encouraging"
+        "key": 0,
+        "question": "Choose the one that describes you most accurately:",
+        "answer": "You're always open to spontaneous outings with friends and you're okay to change your plans. ",
+        "tag": "Go with the flow/Adaptable",
+        "imageurl": 0
     }, {
-        "question": "When at a brunch spot with my friends ",
-        "answer": "I listen to what music they're playing ",
-        "tag": "Observant"
+        "key": 0,
+        "question": "Choose the one that describes you most accurately:",
+        "answer": "You're calm and collected while playing PUBG/Fortnite, cool and composed in many situations. ",
+        "tag": "Calm under pressure",
+        "imageurl": 0
     }, {
-        "question": "When at a brunch spot with my friends ",
-        "answer": "I am very particular about what food they have ",
-        "tag": "Detailed"
+        "key": "If I were at a board game cafe with my friends, I would... /Detailed",
+        "question": "If I were at a board game cafe with my friends, I would... ",
+        "answer": "Already have a list of games that I want to play by the end of the afternoon. ",
+        "tag": "Detailed",
+        "imageurl": 0
     }, {
-        "question": "When at a brunch spot with my friends ",
-        "answer": "I think about what activity we're doing after ",
-        "tag": "Structured/Planning"
+        "key": 0,
+        "question": "If I were at a board game cafe with my friends, I would... ",
+        "answer": "Have a strategy on how to win the game. ",
+        "tag": "No Tag",
+        "imageurl": 0
     }, {
-        "question": "When at a brunch spot with my friends ",
-        "answer": "I check if they serve good coffee ",
-        "tag": "Coffee"
+        "key": 0,
+        "question": "If I were at a board game cafe with my friends, I would... ",
+        "answer": "Buy some snacks from the counter.",
+        "tag": "No Tag",
+        "imageurl": 0
     }, {
-        "question": "My friends don't know that I... ",
-        "answer": "Pretend to be introverted. I'm really more of an extrovert ",
-        "tag": "Front-facing"
+        "key": "My study notes are... /Detailed",
+        "question": "My study notes are... ",
+        "answer": "Detailed. I have all the important stuff written down. ",
+        "tag": "Detailed",
+        "imageurl": 0
     }, {
-        "question": "My friends don't know that I... ",
-        "answer": "Secretly love excel sheets",
-        "tag": "Detailed"
+        "key": 0,
+        "question": "My study notes are... ",
+        "answer": "In the form of doodles, mind-maps or word clouds. Free and easy. \n",
+        "tag": "Creative",
+        "imageurl": 0
     }, {
-        "question": "My friends don't know that I... ",
-        "answer": "Am very particular about time",
-        "tag": "Structured/Planning"
+        "key": 0,
+        "question": "My study notes are... ",
+        "answer": "Structured. Written on my computer with neat bullet points, headers and sub-headers in a standard font. ",
+        "tag": "Structured/Planning",
+        "imageurl": 0
     }, {
-        "question": "My friends don't know that I... ",
-        "answer": "Am picky about how my coffee is made",
-        "tag": "Coffee"
+        "key": 0,
+        "question": "My study notes are... ",
+        "answer": "Partially written on my notebook, partially typed out. I dont have a fixed way of taking notes. ",
+        "tag": "Go with the flow/Adaptable",
+        "imageurl": 0
     }, {
-        "question": "In V camp my favourite social activity is",
-        "answer": "Worship sessions with my vg",
-        "tag": "Behind"
+        "key": "If I were a GIF I would be... /Behind",
+        "question": "If I were a GIF I would be... ",
+        "answer": "camouflage painting ",
+        "tag": "Behind",
+        "imageurl": "https://media.giphy.com/media/a93jwI0wkWTQs/giphy.gif"
     }, {
-        "question": "In V camp my favourite social activity is",
-        "answer": "Taking pictures with my vg",
-        "tag": "Front-facing"
+        "key": "If I were a GIF I would be... /Front-facing",
+        "question": "If I were a GIF I would be... ",
+        "answer": "extrovert gif ",
+        "tag": "Front-facing",
+        "imageurl": "https://media.giphy.com/media/5heRf3BAtwUtwnCc2m/giphy.gif"
     }, {
-        "question": "In V camp my favourite social activity is",
-        "answer": "Tasting the food",
-        "tag": "Observant"
+        "key": "If I were a GIF I would be... /Encouraging",
+        "question": "If I were a GIF I would be... ",
+        "answer": "You go glen coco gif",
+        "tag": "Encouraging",
+        "imageurl": "https://media.giphy.com/media/12XDYvMJNcmLgQ/giphy.gif"
     }, {
-        "question": "In V camp my favourite social activity is",
-        "answer": "The mass games",
-        "tag": "Creative"
+        "key": "If I were a GIF I would be... /Creative",
+        "question": "If I were a GIF I would be... ",
+        "answer": "Abstract art image",
+        "tag": "Creative",
+        "imageurl": "https://media.giphy.com/media/MvovQGsMBY9H2/giphy.gif"
     }, {
+        "key": 0,
+        "question": "If I were a GIF I would be... ",
+        "answer": "i love excel gif",
+        "tag": "Structured/Planning",
+        "imageurl": "https://media.giphy.com/media/OlfmxuWHCmw2Q/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "If I were a GIF I would be... ",
+        "answer": "cool as a cucumber",
+        "tag": "Calm under pressure",
+        "imageurl": "https://media.giphy.com/media/VHwGQNt8L0Pv7BYWB0/giphy.gif"
+    }, {
+        "key": "My favourite activity at V Camp is.../Behind",
+        "question": "My favourite activity at V Camp is...",
+        "answer": "Worship sessions with my VG.",
+        "tag": "Behind",
+        "imageurl": 0
+    }, {
+        "key": 0,
+        "question": "My favourite activity at V Camp is...",
+        "answer": "Taking photos with my friends.",
+        "tag": "Front-facing",
+        "imageurl": 0
+    }, {
+        "key": 0,
+        "question": "My favourite activity at V Camp is...",
+        "answer": "Praying and/or writing notes for people.",
+        "tag": "Encouraging",
+        "imageurl": 0
+    }, {
+        "key": 0,
+        "question": "My favourite activity at V Camp is...",
+        "answer": "Planning and preparing for finale night.",
+        "tag": "Creative",
+        "imageurl": 0
+    }, {
+        "key": "When singing Karaoke with my friends, I... /Observant",
+        "question": "When singing Karaoke with my friends, I... ",
+        "answer": "Tend to notice who sings off-key. ",
+        "tag": "Observant",
+        "imageurl": 0
+    }, {
+        "key": 0,
+        "question": "When singing Karaoke with my friends, I... ",
+        "answer": "Have a curated list of songs I want to sing with my friends.",
+        "tag": "Detailed",
+        "imageurl": 0
+    }, {
+        "key": 0,
+        "question": "When singing Karaoke with my friends, I... ",
+        "answer": "Immediately search for my favourite JJ Lin song.",
+        "tag": "No Tag",
+        "imageurl": 0
+    }, {
+        "key": 0,
+        "question": "When singing Karaoke with my friends, I... ",
+        "answer": "Ask who wants to order food or drinks. ",
+        "tag": "No Tag",
+        "imageurl": 0
+    }, {
+        "key": 0,
+        "question": "I share similar traits with...",
+        "answer": "minions",
+        "tag": "No Tag",
+        "imageurl": "https://media.giphy.com/media/m6OomwWCojfS8/giphy.gif"
+    }, {
+        "key": "I share similar traits with.../Observant",
+        "question": "I share similar traits with...",
+        "answer": "sherlock",
+        "tag": "Observant",
+        "imageurl": "https://media.giphy.com/media/l0MYGtCMbPTYWOzaU/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "I share similar traits with...",
+        "answer": "marie kondo",
+        "tag": "Structured/Planning",
+        "imageurl": "https://media.giphy.com/media/XI1FvkWa2oCx8DXAHo/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "I share similar traits with...",
+        "answer": "lumiere",
+        "tag": "Coffee",
+        "imageurl": "https://media.giphy.com/media/z6eLU1st8hAvm/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "My favorite beverage is...",
+        "answer": "Hot Tea",
+        "tag": "No Tag",
+        "imageurl": "https://media.giphy.com/media/qrOTVsvYm1JIc/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "My favorite beverage is...",
+        "answer": "Milo Dinosaur",
+        "tag": "No Tag",
+        "imageurl": "https://media.giphy.com/media/ACymXQPupuJfa/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "My favorite beverage is...",
+        "answer": "Bubble Tea",
+        "tag": "No Tag",
+        "imageurl": "https://media.giphy.com/media/3b9OHGvLptiuGSGpib/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "My favorite beverage is...",
+        "answer": "Coffee",
+        "tag": "Coffee",
+        "imageurl": "https://media.giphy.com/media/rsQu1BC0BF8wo/giphy.gif"
+    }, {
+        "key": "On free Fridays, I am most likely to.../Front-facing",
         "question": "On free Fridays, I am most likely to...",
-        "answer": "stay home and chill",
-        "tag": "Behind"
+        "answer": "Try some new activity.",
+        "tag": "Front-facing",
+        "imageurl": 0
     }, {
+        "key": 0,
         "question": "On free Fridays, I am most likely to...",
-        "answer": "Meet with a VG mate I know is going through a tough time",
-        "tag": "Encouraging"
+        "answer": "Go ahead with whatever plans I've made.",
+        "tag": "Structured/Planning",
+        "imageurl": 0
     }, {
+        "key": 0,
         "question": "On free Fridays, I am most likely to...",
-        "answer": "go wherever my friends are going",
-        "tag": "Go with the flow/Adaptable"
+        "answer": "Go wherever my friends are going.",
+        "tag": "Go with the flow/Adaptable",
+        "imageurl": 0
     }, {
+        "key": 0,
         "question": "On free Fridays, I am most likely to...",
-        "answer": "Do something I already planned to do",
-        "tag": "Structured/Planning"
+        "answer": "Stay home and chill.",
+        "tag": "No Tag",
+        "imageurl": 0
     }, {
-        "question": "My reaction when someone screams as he/she drops a hot cuppa is...",
-        "answer": "check if they are OK and help them clean up",
-        "tag": "Encouraging"
+        "key": "It's exam season - what do you do?/Encouraging",
+        "question": "It's exam season - what do you do?",
+        "answer": "Create welfare packs for my friends and study with them. I'll share my notes too. ",
+        "tag": "Encouraging",
+        "imageurl": 0
     }, {
-        "question": "My reaction when someone screams as he/she drops a hot cuppa is...",
-        "answer": "thank God it did not splash on them... and me",
-        "tag": "Observant"
+        "key": 0,
+        "question": "It's exam season - what do you do?",
+        "answer": "Study whatever I can and pray that what I study appears in the test.",
+        "tag": "Go with the flow/Adaptable",
+        "imageurl": 0
     }, {
-        "question": "My reaction when someone screams as he/she drops a hot cuppa is...",
-        "answer": "scream with them before anything",
-        "tag": "Go with the flow/Adaptable"
+        "key": 0,
+        "question": "It's exam season - what do you do?",
+        "answer": "I've got it all under control. I usually have a study plan.",
+        "tag": "Calm under pressure",
+        "imageurl": 0
     }, {
-        "question": "My reaction when someone screams as he/she drops a hot cuppa is...",
-        "answer": "check where the coffee was from",
-        "tag": "Coffee"
+        "key": 0,
+        "question": "It's exam season - what do you do?",
+        "answer": "Exams..? I raise a hallelujah~",
+        "tag": "No Tag",
+        "imageurl": 0
     }, {
-        "question": "Studying style?",
-        "answer": "closet mug (there's been a robbery in my closet, but it's just me. I am the closet mugger)",
-        "tag": "Behind"
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "doug judy",
+        "tag": "Behind",
+        "imageurl": "https://media.giphy.com/media/8mdUDkUoAPvEpR8ZIl/giphy.gif"
     }, {
-        "question": "Studying style?",
-        "answer": "Study with friends and share notes",
-        "tag": "Encouraging"
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "jake",
+        "tag": "Front-facing",
+        "imageurl": "https://media.giphy.com/media/dsvAYoyx98FnWVNAnt/giphy.gif"
     }, {
-        "question": "Studying style?",
-        "answer": "Study what I can, if rabak also bopian",
-        "tag": "Go with the flow/Adaptable"
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "boyle",
+        "tag": "Encouraging",
+        "imageurl": "https://media.giphy.com/media/dy4hUOmmCSuoM5aCQs/giphy.gif"
     }, {
-        "question": "Studying style?",
-        "answer": "still got 4 whole days what, 1.5 topics a day not too bad\n",
-        "tag": "Calm under pressure"
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "terry",
+        "tag": "Observant",
+        "imageurl": "https://media.giphy.com/media/BBdydM1hwC4VO/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "roza",
+        "tag": "Detailed",
+        "imageurl": "https://media.giphy.com/media/9zWVbGDeqbOJa/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "gina",
+        "tag": "Creative",
+        "imageurl": "https://media.giphy.com/media/RL26WMq9eDAuA/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "santiago",
+        "tag": "Structured/Planning",
+        "imageurl": "https://media.giphy.com/media/d829tkYjf1BZDGPgPX/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "hitchcock and scully",
+        "tag": "Go with the flow/Adaptable",
+        "imageurl": "https://media.giphy.com/media/Mc1q8G7PAibP17BU84/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "holt",
+        "tag": "Calm under pressure",
+        "imageurl": "https://media.giphy.com/media/JBAguE5Kq1Hy0/giphy.gif"
+    }, {
+        "key": 0,
+        "question": "The Brooklyn 99 character that is most like me is... ",
+        "answer": "What's Brooklyn 99??",
+        "tag": "No Tag",
+        "imageurl": 0
+    }, {
+        "key": "When my friend shares that they are going through a tough season, I...  /Behind",
+        "question": "When my friend shares that they are going through a tough season, I...  ",
+        "answer": "Listen and then make a mental note to pray for them in my own time.",
+        "tag": "Behind",
+        "imageurl": 0
+    }, {
+        "key": "When my friend shares that they are going through a tough season, I...  /Encouraging",
+        "question": "When my friend shares that they are going through a tough season, I...  ",
+        "answer": "Listen and give them a hug and encourage them.",
+        "tag": "Encouraging",
+        "imageurl": 0
+    }, {
+        "key": "When my friend shares that they are going through a tough season, I...  /Detailed",
+        "question": "When my friend shares that they are going through a tough season, I...  ",
+        "answer": "Listen and remember what they shared; follow-up with them next time we meet. ",
+        "tag": "Detailed",
+        "imageurl": 0
     }]
 }

@@ -1,0 +1,123 @@
+{
+    "rows": [{
+        "team": "Creatives",
+        "tag": "Behind"
+    }, {
+        "team": "Creatives",
+        "tag": "Observant"
+    }, {
+        "team": "Creatives",
+        "tag": "Creative"
+    }, {
+        "team": "Creatives",
+        "tag": "Go with the flow/Adaptable"
+    }, {
+        "team": "Baristas",
+        "tag": "Front-facing"
+    }, {
+        "team": "Baristas",
+        "tag": "Detailed"
+    }, {
+        "team": "Baristas",
+        "tag": "Creative"
+    }, {
+        "team": "Baristas",
+        "tag": "Coffee"
+    }, {
+        "team": "Logistics",
+        "tag": "Behind"
+    }, {
+        "team": "Logistics",
+        "tag": "Detailed"
+    }, {
+        "team": "Logistics",
+        "tag": "Go with the flow/Adaptable"
+    }, {
+        "team": "Logistics",
+        "tag": "Calm under pressure"
+    }, {
+        "team": "Security",
+        "tag": "Behind"
+    }, {
+        "team": "Security",
+        "tag": "Observant"
+    }, {
+        "team": "Security",
+        "tag": "Structured/Planning"
+    }, {
+        "team": "Security",
+        "tag": "Calm under pressure"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Behind"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Observant"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Go with the flow/Adaptable"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Calm under pressure"
+    }, {
+        "team": "Venture",
+        "tag": "Front-facing"
+    }, {
+        "team": "Venture",
+        "tag": "Creative"
+    }, {
+        "team": "Venture",
+        "tag": "Structured/Planning"
+    }, {
+        "team": "Venture",
+        "tag": "Go with the flow/Adaptable"
+    }, {
+        "team": "Video",
+        "tag": "Behind"
+    }, {
+        "team": "Video",
+        "tag": "Observant"
+    }, {
+        "team": "Video",
+        "tag": "Creative"
+    }, {
+        "team": "Video",
+        "tag": "Calm under pressure"
+    }, {
+        "team": "VNX",
+        "tag": "Front-facing"
+    }, {
+        "team": "VNX",
+        "tag": "Encouraging"
+    }, {
+        "team": "VNX",
+        "tag": "Observant"
+    }, {
+        "team": "VNX",
+        "tag": "Go with the flow/Adaptable"
+    }, {
+        "team": "V Letters",
+        "tag": "Behind"
+    }, {
+        "team": "V Letters",
+        "tag": "Encouraging"
+    }, {
+        "team": "V Letters",
+        "tag": "Detailed"
+    }, {
+        "team": "V Letters",
+        "tag": "Creative"
+    }, {
+        "team": "VOM Outreach",
+        "tag": "Front-facing"
+    }, {
+        "team": "VOM Outreach",
+        "tag": "Encouraging"
+    }, {
+        "team": "VOM Outreach",
+        "tag": "Observant"
+    }, {
+        "team": "VOM Outreach",
+        "tag": "Structured/Planning"
+    }]
+}

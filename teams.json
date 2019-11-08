@@ -1,156 +1,43 @@
 {
     "rows": [{
-        "team": "Choir",
-        "tag": "Front-facing"
+        "team": "Baristas",
+        "description": "The Barista team brews coffee so that we can enjoy a nice, hot cuppa before VN.",
+        "link": "https://forms.newcreation.org.sg/forms/vbaristas"
     }, {
-        "team": "Choir",
-        "tag": "Serve at VN"
-    }, {
-        "team": "Code V",
-        "tag": "Behind"
-    }, {
-        "team": "Code V",
-        "tag": "Creative"
-    }, {
-        "team": "Coffee",
-        "tag": "Front-facing"
-    }, {
-        "team": "Coffee",
-        "tag": "Encouraging"
-    }, {
-        "team": "Coffee",
-        "tag": "Detailed"
-    }, {
-        "team": "Coffee",
-        "tag": "Serve at VN"
-    }, {
-        "team": "Coffee",
-        "tag": "Creative"
-    }, {
-        "team": "Coffee",
-        "tag": "Coffee"
+        "team": "Creatives",
+        "description": "Dreamers, thinkers, creators. We invite you to collaborate and explore your ideas with us at the Creative Brunch. Happening once every quarter.",
+        "link": ""
     }, {
         "team": "Logistics",
-        "tag": "Behind"
-    }, {
-        "team": "Logistics",
-        "tag": "Detailed"
-    }, {
-        "team": "Logistics",
-        "tag": "Serve at VN"
-    }, {
-        "team": "Logistics",
-        "tag": "Go with the flow/Adaptable"
-    }, {
-        "team": "Logistics",
-        "tag": "Calm under pressure"
+        "description": "The Logistics team ensures everything is up and running for a smooth VN.",
+        "link": "https://forms.newcreation.org.sg/forms/vlogs"
     }, {
         "team": "Security",
-        "tag": "Behind"
+        "description": "The Security team creates a safe environment for us to enjoy VN freely.",
+        "link": "https://forms.newcreation.org.sg/forms/vsecurity"
     }, {
-        "team": "Security",
-        "tag": "Front-facing"
-    }, {
-        "team": "Security",
-        "tag": "Observant"
-    }, {
-        "team": "Security",
-        "tag": "Detailed"
-    }, {
-        "team": "Security",
-        "tag": "Serve at VN"
-    }, {
-        "team": "Security",
-        "tag": "Structured/Planning"
-    }, {
-        "team": "Security",
-        "tag": "Calm under pressure"
-    }, {
-        "team": "Stage Hands",
-        "tag": "Behind"
-    }, {
-        "team": "Stage Hands",
-        "tag": "Observant"
-    }, {
-        "team": "Stage Hands",
-        "tag": "Serve at VN"
-    }, {
-        "team": "Stage Hands",
-        "tag": "Go with the flow/Adaptable"
+        "team": "Stage Crew",
+        "description": "The Stage Crew supports the VN programme, pulling together the various VN teams and the elements of the service.",
+        "link": "https://forms.newcreation.org.sg/forms/vstagecrew"
     }, {
         "team": "Venture",
-        "tag": "Behind"
-    }, {
-        "team": "Venture",
-        "tag": "Front-facing"
-    }, {
-        "team": "Venture",
-        "tag": "Detailed"
-    }, {
-        "team": "Venture",
-        "tag": "Creative"
-    }, {
-        "team": "Venture",
-        "tag": "Structured/Planning"
-    }, {
-        "team": "Venture",
-        "tag": "Go with the flow/Adaptable"
+        "description": "The Venture team plans and executes events that bring V together in fun and refreshing ways.",
+        "link": "https://forms.newcreation.org.sg/forms/venture"
     }, {
         "team": "Video",
-        "tag": "Behind"
-    }, {
-        "team": "Video",
-        "tag": "Observant"
-    }, {
-        "team": "Video",
-        "tag": "Serve at VN"
-    }, {
-        "team": "Video",
-        "tag": "Creative"
-    }, {
-        "team": "Video",
-        "tag": "Structured/Planning"
-    }, {
-        "team": "Video",
-        "tag": "Go with the flow/Adaptable"
-    }, {
-        "team": "Video",
-        "tag": "Calm under pressure"
+        "description": "The Video team prepares and project lyrics, verses, slides, other visuals; as well as operates the live camera feed at VN.",
+        "link": "https://forms.newcreation.org.sg/forms/vvideo"
     }, {
         "team": "VNX",
-        "tag": "Front-facing"
+        "description": "The VNX team makes every youth feels at home at VN - from the door, to bringing them to a seat and getting them connected.",
+        "link": "https://forms.newcreation.org.sg/forms/vnx"
     }, {
-        "team": "VNX",
-        "tag": "Encouraging"
-    }, {
-        "team": "VNX",
-        "tag": "Observant"
-    }, {
-        "team": "VNX",
-        "tag": "Serve at VN"
-    }, {
-        "team": "VNX",
-        "tag": "Structured/Planning"
-    }, {
-        "team": "VNX",
-        "tag": "Go with the flow/Adaptable"
-    }, {
-        "team": "VOM Letters",
-        "tag": "Behind"
-    }, {
-        "team": "VOM Letters",
-        "tag": "Encouraging"
-    }, {
-        "team": "VOM Letters",
-        "tag": "Creative"
+        "team": "V Letters",
+        "description": "The VOM (V Letters) team are carriers of good news, writing priceless reminders of the Lord's goodness via letters to sponsored youths.",
+        "link": "https://forms.newcreation.org.sg/forms/vletters"
     }, {
         "team": "VOM Outreach",
-        "tag": "Front-facing"
-    }, {
-        "team": "VOM Outreach",
-        "tag": "Encouraging"
-    }, {
-        "team": "VOM Outreach",
-        "tag": "Structured/Planning"
+        "description": "The VOM (Outreach) team loves on the local and overseas community through events.",
+        "link": "https://forms.newcreation.org.sg/forms/vomoutreach"
     }]
 }

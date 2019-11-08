@@ -32,10 +32,10 @@ function shuffle(array) {
 }
 
 // https://docs.google.com/spreadsheets/d/e/2PACX-1vTxLC2gDcl3J05egvdWgEt9Jgc5BC299444cf9diFbkD3i5eYcWnUjPHsfwysPIL
-var questionsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=3&columns=false'
-var tagsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=4&columns=false'
-var teamTagsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=5&columns=false'
-var teamsApi = 'https://gsx2json.herokuapp.com/api?id=1-3K53b6AXjrbq9Jw0CfTs9ioJ4m6xr7lnFkCNEwvP3I&sheet=6&columns=false'
+var questionsApi = 'questions.json'
+var tagsApi = 'tags.json'
+var teamTagsApi = 'teamTags.json'
+var teamsApi = 'teams.json'
 
 function getQuestions() {
     return axios.get(questionsApi)
