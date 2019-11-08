@@ -53,6 +53,10 @@ function getTeams() {
     return axios.get(teamsApi)
 }
 
+console.log("Hey you! Yes, you there, reading the console log!")
+console.log("If you're attending Varsity, the V Coders are inviting you to join us!")
+console.log("Visit https://vrsty.info/v-coders for more information!")
+
 axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
     .then(axios.spread(function(questionsResp, tagsResp, teamTagsResp, teamsResp) {
         // prepare questions
