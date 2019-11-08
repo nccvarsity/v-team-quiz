@@ -104,7 +104,8 @@
                 <p v-if="question.hasImages" class="text-xs">(Choose an image)</p>
                 <div class="answers my-10" :class="question.hasImages ? 'flex flex-wrap justify-between' : ''">
                     <div v-for="(answer, indexb) in question.answers" :class="question.hasImages ? 'w-almost-1/2 square rounded-lg relative mb-2 bg-black' : ''">
-                        <button v-if="!answer.imageurl" class="w-full border border-black px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'bg-accent text-secondary' : 'text-primary' ">{{answer.ans}}</button>
+                        <button v-if="!question.hasImages" class="w-full border border-black px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'bg-accent text-secondary' : 'text-primary' ">{{answer.ans}}</button>
+                        <button v-if="question.hasImages && !answer.imageurl" class="w-full h-full rounded-lg mb-3 text-xl text-white border-4" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'border-yellow-500' : 'border-black' ">{{answer.ans}}</button>
                         <img v-if="answer.imageurl" :src="answer.imageurl" :alt="answer.ans" class="object-contain w-full h-full border-4 cursor-pointer rounded-lg absolute" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'border-yellow-500' : 'border-black' " />
                     </div>
                 </div>
