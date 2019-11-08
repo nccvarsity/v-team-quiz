@@ -88,8 +88,11 @@
                 <path id="svg_70" d="m168.076165,106.328102c-0.49995,1.95813 0.24997,3.6663 0.74992,4.74952c0.9999,1.43735 2.18728,2.06229 3.56214,2.62473" fill-opacity="null" stroke-width="null" stroke="#000000" fill="none" />
             </svg>
             <h1 class="text-center text-3xl">MBTI</h1>
+            <p class="my-2">
+                We all know Martha loved serving. Maybe a bit too much. What we can copy though is her spirit of excellence.
+            </p>
             <p class="my-4">
-                Take the Martha of Bethany Team Indicator (MBTI) quiz and find out what kind of server you are!
+                Take the Martha of Bethany Team Indicator (MBTI) quiz and find out which serving team(s) suits you! Just remember to serve out of a spirit of rest!
             </p>
             <div id="loading-btn" class="mt-24 w-full border border-black px-4 py-2 rounded mb-3 cursor-not-allowed opacity-80 bg-accent text-secondary text-center">Loading</div>
             <div id="start" class="hidden">
@@ -105,7 +108,7 @@
                 <div class="answers my-10" :class="question.hasImages ? 'flex flex-wrap justify-between' : ''">
                     <div v-for="(answer, indexb) in question.answers" :class="question.hasImages ? 'w-almost-1/2 square rounded-lg relative mb-2 bg-black' : ''">
                         <button v-if="!question.hasImages" class="w-full border border-black px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'bg-accent text-secondary' : 'text-primary' ">{{answer.ans}}</button>
-                        <button v-if="question.hasImages && !answer.imageurl" class="w-full h-full rounded-lg mb-3 text-xl text-white border-4" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'border-yellow-500' : 'border-black' ">{{answer.ans}}</button>
+                        <button v-if="question.hasImages && !answer.imageurl" class="w-full h-full rounded-lg text-xl text-white border-4 absolute" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'border-yellow-500' : 'border-black' ">{{answer.ans}}</button>
                         <img v-if="answer.imageurl" :src="answer.imageurl" :alt="answer.ans" class="object-contain w-full h-full border-4 cursor-pointer rounded-lg absolute" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'border-yellow-500' : 'border-black' " />
                     </div>
                 </div>
