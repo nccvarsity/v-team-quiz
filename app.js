@@ -208,8 +208,10 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
                 },
                 goToResults: function() {
                     document.getElementById("results").scrollIntoView()
+                    i = 1
                     this.teams.forEach(function(team){
-                        ga('send','event','Quiz','Result Team',team.team+'-1')
+                        ga('send','event','Quiz','Result Team',team+' - '+i)
+                        i++
                     })
                 },
                 openTeam: function(index) {
