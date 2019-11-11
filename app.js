@@ -1,3 +1,7 @@
+// Hey there! Curious on how this app worked? Currently attending Varsity?
+// Why don't you join the Varsity Coders team! Find out more at
+// https://vrsty.info/v-coders
+
 function groupBy(array, key) {
     grouped = {}
     array.forEach(function(item) {
