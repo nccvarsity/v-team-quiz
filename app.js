@@ -146,7 +146,7 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
                 },
                 tagResults: function() {
                     return this.tags
-                    .slice(0, 4)
+                    .slice(0, 3)
                 },
                 teams: function() {
 
@@ -181,7 +181,7 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
                         .map(function(team) {
                             return team[0]
                         })
-                        .slice(0, 3)
+                        .slice(0, 2)
                 },
                 teamResults: function() {
                     return this.teams
