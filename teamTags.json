@@ -1,123 +1,75 @@
 {
     "rows": [{
-        "team": "Creatives",
+        "team": "Creative & Worship",
         "tag": "Behind"
     }, {
-        "team": "Creatives",
+        "team": "Creative & Worship",
         "tag": "Observant"
     }, {
-        "team": "Creatives",
+        "team": "Creative & Worship",
         "tag": "Creative"
     }, {
-        "team": "Creatives",
+        "team": "Creative & Worship",
         "tag": "Go with the flow/Adaptable"
     }, {
-        "team": "Baristas",
-        "tag": "Front-facing"
-    }, {
-        "team": "Baristas",
+        "team": "Service Ops (Foyer Team)",
         "tag": "Detailed"
     }, {
-        "team": "Baristas",
-        "tag": "Creative"
+        "team": "Service Ops (Foyer Team)",
+        "tag": "Observant"
     }, {
-        "team": "Baristas",
+        "team": "Service Ops (Foyer Team)",
+        "tag": "Structured/Planning"
+    }, {
+        "team": "Service Ops (Foyer Team)",
+        "tag": "Calm under pressure"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Behind"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Observant"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Go with the flow/Adaptable"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Calm under pressure"
+    }, {
+        "team": "Video",
+        "tag": "Behind"
+    }, {
+        "team": "Video",
+        "tag": "Observant"
+    }, {
+        "team": "Video",
         "tag": "Coffee"
     }, {
-        "team": "Logistics",
-        "tag": "Behind"
-    }, {
-        "team": "Logistics",
-        "tag": "Detailed"
-    }, {
-        "team": "Logistics",
-        "tag": "Go with the flow/Adaptable"
-    }, {
-        "team": "Logistics",
+        "team": "Video",
         "tag": "Calm under pressure"
     }, {
-        "team": "Security",
-        "tag": "Behind"
-    }, {
-        "team": "Security",
-        "tag": "Observant"
-    }, {
-        "team": "Security",
-        "tag": "Structured/Planning"
-    }, {
-        "team": "Security",
-        "tag": "Calm under pressure"
-    }, {
-        "team": "Stage Crew",
-        "tag": "Behind"
-    }, {
-        "team": "Stage Crew",
-        "tag": "Observant"
-    }, {
-        "team": "Stage Crew",
-        "tag": "Go with the flow/Adaptable"
-    }, {
-        "team": "Stage Crew",
-        "tag": "Calm under pressure"
-    }, {
-        "team": "Venture",
+        "team": "Service Ops (Audi Team)",
         "tag": "Front-facing"
     }, {
-        "team": "Venture",
-        "tag": "Creative"
+        "team": "Service Ops (Audi Team)",
+        "tag": "Encouraging"
     }, {
-        "team": "Venture",
-        "tag": "Structured/Planning"
+        "team": "Service Ops (Audi Team)",
+        "tag": "Observant"
     }, {
-        "team": "Venture",
+        "team": "Service Ops (Audi Team)",
         "tag": "Go with the flow/Adaptable"
     }, {
-        "team": "Video",
-        "tag": "Behind"
-    }, {
-        "team": "Video",
-        "tag": "Observant"
-    }, {
-        "team": "Video",
-        "tag": "Creative"
-    }, {
-        "team": "Video",
-        "tag": "Calm under pressure"
-    }, {
-        "team": "VNX",
+        "team": "Ambassadors #LORO",
         "tag": "Front-facing"
     }, {
-        "team": "VNX",
+        "team": "Ambassadors #LORO",
         "tag": "Encouraging"
     }, {
-        "team": "VNX",
+        "team": "Ambassadors #LORO",
         "tag": "Observant"
     }, {
-        "team": "VNX",
-        "tag": "Go with the flow/Adaptable"
-    }, {
-        "team": "V Letters",
-        "tag": "Behind"
-    }, {
-        "team": "V Letters",
-        "tag": "Encouraging"
-    }, {
-        "team": "V Letters",
-        "tag": "Detailed"
-    }, {
-        "team": "V Letters",
-        "tag": "Creative"
-    }, {
-        "team": "VOM Outreach",
-        "tag": "Front-facing"
-    }, {
-        "team": "VOM Outreach",
-        "tag": "Encouraging"
-    }, {
-        "team": "VOM Outreach",
-        "tag": "Observant"
-    }, {
-        "team": "VOM Outreach",
+        "team": "Ambassadors #LORO",
         "tag": "Structured/Planning"
     }]
 }

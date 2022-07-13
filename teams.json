@@ -1,43 +1,27 @@
 {
     "rows": [{
-        "team": "Baristas",
-        "description": "The Barista team brews coffee so that we can enjoy a nice, hot cuppa before VN.",
-        "link": "https://forms.newcreation.org.sg/forms/vbaristas"
-    }, {
-        "team": "Creatives",
+        "team": "Creative & Worship",
         "description": "Dreamers, thinkers, creators. We invite you to collaborate and explore your ideas with us at the Creative Brunch. Happening once every quarter.",
         "link": ""
     }, {
-        "team": "Logistics",
+        "team": "Service Ops (Audi Team)",
         "description": "The Logistics team ensures everything is up and running for a smooth VN.",
-        "link": "https://forms.newcreation.org.sg/forms/vlogs"
+        "link": ""
     }, {
-        "team": "Security",
+        "team": "Service Ops (Foyer Team)",
         "description": "The Security team creates a safe environment for us to enjoy VN freely.",
-        "link": "https://forms.newcreation.org.sg/forms/vsecurity"
+        "link": ""
     }, {
         "team": "Stage Crew",
         "description": "The Stage Crew supports the VN programme, pulling together the various VN teams and the elements of the service.",
-        "link": "https://forms.newcreation.org.sg/forms/vstagecrew"
-    }, {
-        "team": "Venture",
-        "description": "The Venture team plans and executes events that bring V together in fun and refreshing ways.",
-        "link": "https://forms.newcreation.org.sg/forms/venture"
+        "link": ""
     }, {
         "team": "Video",
         "description": "The Video team prepares and project lyrics, verses, slides, other visuals; as well as operates the live camera feed at VN.",
-        "link": "https://forms.newcreation.org.sg/forms/vvideo"
+        "link": ""
     }, {
-        "team": "VNX",
-        "description": "The VNX team makes every youth feels at home at VN - from the door, to bringing them to a seat and getting them connected.",
-        "link": "https://forms.newcreation.org.sg/forms/vnx"
-    }, {
-        "team": "V Letters",
-        "description": "The VOM (V Letters) team are carriers of good news, writing priceless reminders of the Lord's goodness via letters to sponsored youths.",
-        "link": "https://forms.newcreation.org.sg/forms/vletters"
-    }, {
-        "team": "VOM Outreach",
+        "team": "Ambassadors #LORO",
         "description": "The VOM (Outreach) team loves on the local and overseas community through events.",
-        "link": "https://forms.newcreation.org.sg/forms/vomoutreach"
+        "link": ""
     }]
 }
