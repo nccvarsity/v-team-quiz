@@ -200,18 +200,18 @@ axios.all([getQuestions(), getTags(), getTeamTags(), getTeams()])
             methods: {
                 goToNext: function(index) {
                     nextIndex = index + 1
-                    document.getElementById("question-" + nextIndex).scrollIntoView()
+                    document.getElementById("question-" + nextIndex).scrollIntoView({behavior: "smooth", block: "start"})
                 },
                 goToPrev: function(index) {
                     nextIndex = index - 1
-                    document.getElementById("question-" + nextIndex).scrollIntoView()
+                    document.getElementById("question-" + nextIndex).scrollIntoView({behavior: "smooth", block: "start"})
                 },
                 selectAns: function(question, tag, index) {
                     question.option = tag
                     question.selection = index
                 },
                 goToResults: function() {
-                    document.getElementById("results").scrollIntoView()
+                    document.getElementById("results").scrollIntoView({behavior: "smooth", block: "start"})
                     i = 1
                     this.teams.forEach(function(team){
                         ga('send','event','Quiz','Result Team',team+' - '+i)
