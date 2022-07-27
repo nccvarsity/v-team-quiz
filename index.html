@@ -19,6 +19,7 @@ like this! Find out more at https://vrsty.info/v-coders.
     <link href="app.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
 </head>
 
 <body>
@@ -103,8 +104,8 @@ like this! Find out more at https://vrsty.info/v-coders.
                 <h2 class="text-2xl mb-4">Tell us your name:</h2>
                 <input type="text" v-model="name" class="appearance-none border border-black rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-5" autofocus />
                 <a href="#quiz" class="block w-full border border-black px-4 py-2 rounded mb-3 bg-accent text-secondary text-center">Take the quiz!</a>
-                <p>Or already have a team in mind?</p>
-                <a href="http://bit.ly/jointeamV" class="block w-full border border-black px-4 py-2 rounded mb-3 text-secondary text-center">Join a team!</a>
+                <!-- <p>Or already have a team in mind?</p>
+                <a href="http://bit.ly/jointeamV" class="block w-full border border-black px-4 py-2 rounded mb-3 text-secondary text-center">Join a team!</a> -->
             </div>
         </div>
         <div id="quiz" class="hidden">
@@ -118,14 +119,13 @@ like this! Find out more at https://vrsty.info/v-coders.
                         <button v-if="question.hasImages && !answer.imageurl && index != questions.length-1" class="w-full h-full rounded-lg text-xl text-white border-4 absolute" @click="selectAns(question, answer.tag, indexb),goToNext(index)" :class="indexb == question.selection? 'border-yellow-500' : 'border-black' ">{{answer.ans}}</button>
                         <img v-if="answer.imageurl && index != questions.length-1" :src="answer.imageurl" :alt="answer.ans" class="object-contain w-full h-full border-4 cursor-pointer rounded-lg absolute" @click="selectAns(question, answer.tag, indexb),goToNext(index)" :class="indexb == question.selection? 'border-yellow-500' : 'border-black' " />
                         
-                        <button v-if="!question.hasImages && index == questions.length-1" class="w-full border border-black px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag, indexb),goToResults(index)" :class="indexb == question.selection? 'bg-accent text-secondary' : 'text-primary' ">{{answer.ans}}</button>
+                        <button v-if="!question.hasImages && index == questions.length-1" class="w-full border border-black px-4 py-2 rounded mb-3" @click="selectAns(question, answer.tag, indexb)" :class="indexb == question.selection? 'bg-accent text-secondary' : 'text-primary' ">{{answer.ans}}</button>
                         <button v-if="question.hasImages && !answer.imageurl && index == questions.length-1" class="w-full h-full rounded-lg text-xl text-white border-4 absolute" @click="selectAns(question, answer.tag, indexb),goToResults(index)" :class="indexb == question.selection? 'border-yellow-500' : 'border-black' ">{{answer.ans}}</button>
                         <img v-if="answer.imageurl && index == questions.length-1" :src="answer.imageurl" :alt="answer.ans" class="object-contain w-full h-full border-4 cursor-pointer rounded-lg absolute" @click="selectAns(question, answer.tag, indexb),goToResults(index)" :class="indexb == question.selection? 'border-yellow-500' : 'border-black' " />
                     
                       </div>
                 </div>
-                <!-- <button v-if="index != questions.length-1" @click="goToNext(index)" class="w-full border border-black px-4 py-2 rounded mb-3 text-primary">Next</button> -->
-                <button v-if="index == questions.length-1" @click="goToResults()" class="w-full border border-black px-4 py-2 rounded mb-3 text-primary">Next</button>
+                <button v-if="index == questions.length-1" @click="goToResults()" class="w-full border border-black px-4 py-2 rounded mb-3 text-primary">View results</button>
                 <button v-if="index != 0" @click="goToPrev(index)" class="text-xs text-primary">Go back</button>
             </div>
             <div id="results" class="container min-h-screen p-10 mx-auto flex flex-col lg:justify-center max-w-3xl">
@@ -168,8 +168,8 @@ like this! Find out more at https://vrsty.info/v-coders.
                             </div>
                         </div>
                     </div>
-                    <p class="text-xs">Quiz designed by <a href="https://thezone.newcreation.org.sg/varsity" class="underline" target="_blank">Team Varsity</a>, handcrafted by <a href="https://vrsty.info/v-coders" class="underline" target="_blank">V
-                            Coders</a></p>
+                    <!-- <p class="text-xs">Quiz designed by <a href="https://thezone.newcreation.org.sg/varsity" class="underline" target="_blank">Team Varsity</a>, handcrafted by <a href="https://vrsty.info/v-coders" class="underline" target="_blank">V Coders</a></p> -->
+                    <p class="text-xs">Quiz designed by <a href="https://thezone.newcreation.org.sg/varsity" class="underline" target="_blank">Team Varsity</a>, handcrafted by V Coders</p>
                 </div>
                 <div v-if="tags.length == 0">
                     <p class="text-2xl mb-10">You haven't answered any questions.</p>

@@ -1,10 +1,10 @@
 {
     "rows": [{
         "team": "Creative & Worship",
-        "tag": "Behind"
+        "tag": "Coffee"
     }, {
         "team": "Creative & Worship",
-        "tag": "Observant"
+        "tag": "Behind"
     }, {
         "team": "Creative & Worship",
         "tag": "Creative"
@@ -12,17 +12,23 @@
         "team": "Creative & Worship",
         "tag": "Go with the flow/Adaptable"
     }, {
-        "team": "Service Ops (Foyer Team)",
-        "tag": "Detailed"
+        "team": "Creative & Worship",
+        "tag": "Encouraging"
     }, {
-        "team": "Service Ops (Foyer Team)",
+        "team": "Service Ops (Foyer)",
+        "tag": "Encouraging"
+    }, {
+        "team": "Service Ops (Foyer)",
         "tag": "Observant"
     }, {
-        "team": "Service Ops (Foyer Team)",
+        "team": "Service Ops (Foyer)",
         "tag": "Structured/Planning"
     }, {
-        "team": "Service Ops (Foyer Team)",
+        "team": "Service Ops (Foyer)",
         "tag": "Calm under pressure"
+    }, {
+        "team": "Service Ops (Foyer)",
+        "tag": "Front-facing"
     }, {
         "team": "Stage Crew",
         "tag": "Behind"
@@ -31,16 +37,19 @@
         "tag": "Observant"
     }, {
         "team": "Stage Crew",
+        "tag": "Structured/Planning"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Calm under pressure"
+    }, {
+        "team": "Stage Crew",
+        "tag": "Detailed"
+    }, {
+        "team": "Video",
+        "tag": "Behind"
+    }, {
+        "team": "Video",
         "tag": "Go with the flow/Adaptable"
-    }, {
-        "team": "Stage Crew",
-        "tag": "Calm under pressure"
-    }, {
-        "team": "Video",
-        "tag": "Behind"
-    }, {
-        "team": "Video",
-        "tag": "Observant"
     }, {
         "team": "Video",
         "tag": "Coffee"
@@ -48,28 +57,37 @@
         "team": "Video",
         "tag": "Calm under pressure"
     }, {
-        "team": "Service Ops (Audi Team)",
+        "team": "Video",
+        "tag": "Creative"
+    }, {
+        "team": "Service Ops (Audi)",
         "tag": "Front-facing"
     }, {
-        "team": "Service Ops (Audi Team)",
+        "team": "Service Ops (Audi)",
+        "tag": "Detailed"
+    }, {
+        "team": "Service Ops (Audi)",
         "tag": "Encouraging"
     }, {
-        "team": "Service Ops (Audi Team)",
+        "team": "Service Ops (Audi)",
         "tag": "Observant"
     }, {
-        "team": "Service Ops (Audi Team)",
+        "team": "Service Ops (Audi)",
         "tag": "Go with the flow/Adaptable"
     }, {
-        "team": "Ambassadors #LORO",
+        "team": "Ambs #LORO",
         "tag": "Front-facing"
     }, {
-        "team": "Ambassadors #LORO",
+        "team": "Ambs #LORO",
         "tag": "Encouraging"
     }, {
-        "team": "Ambassadors #LORO",
+        "team": "Ambs #LORO",
         "tag": "Observant"
     }, {
-        "team": "Ambassadors #LORO",
-        "tag": "Structured/Planning"
+        "team": "Ambs #LORO",
+        "tag": "Creative"
+    }, {
+        "team": "Ambs #LORO",
+        "tag": "Coffee"
     }]
 }

@@ -1,15 +1,15 @@
 {
     "rows": [{
         "team": "Creative & Worship",
-        "description": "Dreamers, thinkers, creators. We invite you to collaborate and explore your ideas with us at the Creative Brunch. Happening once every quarter.",
+        "description": "Calling all creatives and VG worship servers to join our creative/worship community in V!",
         "link": ""
     }, {
         "team": "Service Ops (Audi)",
-        "description": "The Logistics team ensures everything is up and running for a smooth VN.",
+        "description": "Ever wanted to welcome someone home to the Father's house? We are the team that owns the auditorium space, ready to welcome everyone in and help them find their one-in-a-5000 seat.",
         "link": ""
     }, {
         "team": "Service Ops (Foyer)",
-        "description": "The Security team creates a safe environment for us to enjoy VN freely.",
+        "description": "As the first point of contact for service attendees, the Ops team starts the service experience and helps to guide the lost!",
         "link": ""
     }, {
         "team": "Stage Crew",
@@ -21,7 +21,7 @@
         "link": ""
     }, {
         "team": "Ambs #LORO",
-        "description": "The VOM (Outreach) team loves on the local and overseas community through events.",
+        "description": "Do you like talking to people and getting them connected to community? Or do you like praying for others? Or maybe you simply want to know what LORO actually means? Join us to find out!",
         "link": ""
     }]
 }

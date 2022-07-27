@@ -1,36 +1,47 @@
 {
     "rows": [{
         "tag": "Behind",
-        "you": "care about the big picture and would love to see what goes on behind-the-scenes"
+        "you": "care about the big picture and would love to see what goes on behind-the-scenes",
+        "or": "enjoy having that secret life with the Lord"
     }, {
         "tag": "Front-facing",
-        "you": "are outgoing and comfortable meeting new people"
+        "you": "are outgoing and are comfortable meeting new people",
+        "or": "are friendly and enjoy meeting new people"
     }, {
         "tag": "Encouraging",
-        "you": "love people and are ready to speak life into someone else’s situation"
+        "you": "love people and are ready to speak life into someone else’s situation",
+        "or": "are a good listener and readily encourage someone when they need it"
     }, {
         "tag": "Observant",
-        "you": "notice things that others wouldn't normally notice"
+        "you": "notice things that others wouldn't normally notice",
+        "or": "notice the subtleties of your surroundings where others normally wouldn't"
     }, {
         "tag": "Detailed",
-        "you": "look into the intricacies of things and often spot the gaps that need to be filled"
+        "you": "look into the intricacies of things and often spot the gaps that need to be filled",
+        "or": "like to be detailed and are faithful in the little things"
     }, {
         "tag": "Creative",
-        "you": "see everything you do as a canvas for expression and exploration"
+        "you": "see everything you do as a canvas for expression and exploration",
+        "or": "love to dream, create things, and imagine the possibilities"
     }, {
         "tag": "Structured/Planning",
-        "you": "know that although the LORD directs your steps, that doesn't stop you from having a plan"
+        "you": "know that although the LORD directs your steps, that doesn't stop you from having a plan",
+        "or": "prefer to do things in an orderly fashion, like how the LORD busies Himself with your each and every step"
     }, {
         "tag": "Go with the flow/Adaptable",
-        "you": "are fluid like water, able to flow wherever it needs to go"
+        "you": "are fluid like water, able to flow wherever it needs to go",
+        "or": "are ready to roll with any changes and do what needs to be done"
     }, {
         "tag": "Calm under pressure",
-        "you": "do not see when heat cometh, you're the coolest cucumber in NTUC"
+        "you": "do not see when heat cometh, you're the coolest cucumber in NTUC",
+        "or": "probably have diamond hands, always calm and collected"
     }, {
         "tag": "Coffee",
-        "you": "want to share your love for coffee with the world"
+        "you": "want to share your love for coffee with the world",
+        "or": "would enjoy a nice cup of coffee when hanging out with friends"
     }, {
         "tag": "No Tag",
-        "you": 0
+        "you": 0,
+        "or": 0
     }]
 }
