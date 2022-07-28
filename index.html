@@ -16,15 +16,20 @@ like this! Find out more at https://vrsty.info/v-coders.
     <link rel="icon" href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link href="app.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <link href="app.css" rel="stylesheet" id="theme-link">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
 </head>
 
 <body>
     <div id="app">
         <div id="loading" class="container h-screen flex flex-col lg:justify-center p-10 mx-auto max-w-3xl">
+          <div class="flex justify-end">
+            <div class="form-switch" id="dark">
+              <input @click="flickSwitch(), flickAppSwitch()" class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch">
+            </div>
+          </div>
             <!-- V-arch logo in SVG! Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
             <svg viewbox="0 0 260 400" class="block max-w-full mx-auto mb-10" width="260" height="400">
                 <path id="svg_5" d="m39.621118,123.336283l187.23918,-0.44246l-55.650033,268.105628l-75.939108,0l-55.650039,-267.663167z" stroke-width="4" stroke="#000000" fill="none" />
@@ -94,7 +99,7 @@ like this! Find out more at https://vrsty.info/v-coders.
             </svg>
             <h1 class="text-center text-3xl">MBTI</h1>
             <p class="my-2">
-                We all know Martha loved serving. Maybe a bit too much. What we can copy though is her spirit of excellence.
+                We all know Martha loved serving... maybe a bit too much. What we can copy though is her spirit of excellence.
             </p>
             <p class="my-4">
                 Take the Martha of Bethany Team Indicator (MBTI) quiz and find out which serving team(s) suits you! Just remember to serve out of a spirit of rest!
@@ -125,46 +130,51 @@ like this! Find out more at https://vrsty.info/v-coders.
                     
                       </div>
                 </div>
-                <button id="resultsButton" v-if="index == questions.length-1" @click="goToResults(),vSparkles()" class="w-full border border-black px-4 py-2 rounded mb-3 text-primary">View results</button>
+                <button id="resultsButton" v-if="index == questions.length-1" @click="goToResults()" class="bg-emphasize w-full border border-black px-4 py-2 rounded mb-3 text-secondary">View results</button>
                 <button v-if="index != 0" @click="goToPrev(index)" class="text-xs text-primary">Go back</button>
             </div>
-            <div id="results" class="container min-h-screen p-10 mx-auto flex flex-col lg:justify-center max-w-3xl">
+            <div id="results" class="hidden container min-h-screen p-10 mx-auto flex flex-col lg:justify-center max-w-3xl">
                 <div v-if="tags.length > 0">
                     <div class="">
                         <h1 class="text-xl font-semibold">Hey {{name ? name : 'there'}}!</h1>
+                        <br>
+                        <p>
+                          Based on your answers, here's what we think describes you:
+                        </p>
+                        <br>
                         <p class="text-l">
                             <span v-for="(tag, index) in tagResults">You {{tag.you}}. </span>
                         </p>
-                        <h2 v-if="teamResults.length > 0" class="text-xl my-6">We think these teams will be most blessed if you join them:</h2>
-                        <div v-for="(team, index) in teamResults" class="border border-solid border-black px-4 py-2 my-2">
-                            <div class="font-bold block flex flex-wrap justify-between items-center text-xl" @click="openTeam(index)">
+                        <h2 v-if="teamResults.length > 0" class="text-xl my-6">We believe these teams will be most blessed if you join them:</h2>
+                        <div v-for="(team, index) in teamResults" :class="dark ? 'border border-black border-solid px-4 py-2 my-2' : 'border border-solid px-4 py-2 my-2'">
+                            <div class="text-primary font-bold block flex flex-wrap justify-between items-center text-xl" @click="openTeam(index)">
                                 {{team.team}}
-                                <svg v-if="teamOpened != index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-6 h-6 ml-2">
-                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                <svg v-if="teamOpened != index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="text-primary fill-current w-6 h-6 ml-2">
+                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" stroke-width="0" stroke="#000000"/>
                                 </svg>
-                                <svg v-if="teamOpened == index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-6 h-6 ml-2">
-                                    <path d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z" />
+                                <svg v-if="teamOpened == index" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="text-primary fill-current w-6 h-6 ml-2">
+                                    <path d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z" stroke-width="0" stroke="#000000"/>
                                 </svg>
                             </div>
                             <div :class="teamOpened == index ? 'block' : 'hidden'">
-                                <p class="text-gray-900 my-2 text-s">{{team.description}}</p>
-                                <a v-if="team.link" :href="team.link" class="bg-accent block border border-solid border-black py-2 px-4 rounded-lg cursor-pointer mb-2" target="_blank">Join {{team.team}} Now!</a>
+                                <p class="text-primary text-gray-900 my-2 text-s">{{team.description}}</p>
+                                <a v-if="team.link" :href="team.link" class="bg-accent block border border-solid py-2 px-4 rounded-lg cursor-pointer mb-2" :class="dark ? 'border-black' : ''" target="_blank">Join {{team.team}} Now!</a>
                             </div>
                         </div>
                         <h2 class="mt-6">Check out the other teams in Varsity:</h2>
-                        <div v-for="(team, index) in teamOthers" class="border border-solid border-black px-4 py-2 my-2">
-                            <div class="font-bold block flex flex-wrap justify-between items-center text-xl" @click="openTeam((index + teamResults.length))">
+                        <div v-for="(team, index) in teamOthers" :class="dark ? 'border border-black border-solid px-4 py-2 my-2' : 'border border-solid px-4 py-2 my-2'">
+                            <div class="text-primary font-bold block flex flex-wrap justify-between items-center text-xl" @click="openTeam((index + teamResults.length))">
                                 {{team.team}}
                                 <svg v-if="teamOpened != (index + teamResults.length)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-6 h-6 ml-2">
-                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" stroke-width="0" stroke="#000000" />
                                 </svg>
                                 <svg v-if="teamOpened == (index + teamResults.length)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-6 h-6 ml-2">
-                                    <path d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z" />
+                                    <path d="M10.707 7.05L10 6.343 4.343 12l1.414 1.414L10 9.172l4.243 4.242L15.657 12z" stroke-width="0" stroke="#000000" />
                                 </svg>
                             </div>
                             <div :class="teamOpened == (index + teamResults.length) ? 'block' : 'hidden'">
-                                <p class="text-gray-900 my-2 text-s">{{team.description}}</p>
-                                <a v-if="team.link" :href="team.link" class="bg-accent block border border-solid border-black py-2 px-4 rounded-lg cursor-pointer mb-2" target="_blank">Join {{team.team}} Now!</a>
+                                <p class="text-primary text-gray-900 my-2 text-s">{{team.description}}</p>
+                                <a v-if="team.link" :href="team.link" class="bg-accent block border border-solid py-2 px-4 rounded-lg cursor-pointer mb-2" target="_blank" :class="dark ? 'border-black' : ''">Join {{team.team}} Now!</a>
                             </div>
                         </div>
                     </div>
@@ -173,7 +183,7 @@ like this! Find out more at https://vrsty.info/v-coders.
                 </div>
                 <div v-if="tags.length == 0">
                     <p class="text-2xl mb-10">You haven't answered any questions.</p>
-                    <a href="#quiz" class="block w-full border border-black px-4 py-2 rounded mb-3 text-center">Go try some questions!</a>
+                    <a href="#quiz" id="go-to-start" class="block w-full border border-black px-4 py-2 rounded mb-3 text-center">Go try some questions!</a>
                 </div>
             </div>
         </div>
@@ -189,6 +199,8 @@ like this! Find out more at https://vrsty.info/v-coders.
         ga('send', 'pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+    <script src='switch.js'></script>
     <script src='app.js'></script>
 </body>
 

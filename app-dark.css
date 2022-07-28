@@ -1,5 +1,5 @@
 body {
-    background: #F7F7F7;
+    background: black;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,7 +16,7 @@ body {
 }
 
 .text-primary, h1, h2, p {
-    color: black;
+    color: white;
 }
 
 .text-secondary {

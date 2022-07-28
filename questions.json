@@ -9,7 +9,7 @@
         "key": 0,
         "question": "Me playing Jenga:",
         "answer": "Freaking Out",
-        "tag": "No Tag",
+        "tag": "Detailed",
         "imageurl": "https://media.giphy.com/media/9GJ2pJZjSBs9V7RxVX/giphy.gif"
     }, {
         "key": 0,
@@ -57,19 +57,19 @@
         "key": "If I were at a board game cafe with my friends, I would... /Detailed",
         "question": "If I were at a board game cafe with my friends, I would... ",
         "answer": "Already have a list of games that I want to play by the end of the afternoon. ",
-        "tag": "Detailed",
+        "tag": "Structured/Planning",
         "imageurl": 0
     }, {
         "key": 0,
         "question": "If I were at a board game cafe with my friends, I would... ",
         "answer": "Have a strategy on how to win the game. ",
-        "tag": "No Tag",
+        "tag": "Creative",
         "imageurl": 0
     }, {
         "key": 0,
         "question": "If I were at a board game cafe with my friends, I would... ",
         "answer": "Buy some snacks from the counter.",
-        "tag": "No Tag",
+        "tag": "Front-facing",
         "imageurl": 0
     }, {
         "key": "My study notes are... /Detailed",
@@ -98,7 +98,7 @@
     }, {
         "key": "If I were a GIF I would be... /Behind",
         "question": "If I were a GIF I would be... ",
-        "answer": "camouflage painting ",
+        "answer": "fade into background",
         "tag": "Behind",
         "imageurl": "https://media.giphy.com/media/a93jwI0wkWTQs/giphy.gif"
     }, {
@@ -152,7 +152,7 @@
     }, {
         "key": 0,
         "question": "My favourite activity at V Camp is...",
-        "answer": "Planning and preparing for finale night.",
+        "answer": "Thinking of ways I can pray for or bless someone.",
         "tag": "Creative",
         "imageurl": 0
     }, {
@@ -248,8 +248,8 @@
     }, {
         "key": 0,
         "question": "On free Fridays, I am most likely to...",
-        "answer": "Stay home and chill.",
-        "tag": "No Tag",
+        "answer": "Stay home and chill with a hot cuppa.",
+        "tag": "Coffee",
         "imageurl": 0
     }, {
         "key": "It's exam season - what do you do?/Encouraging",
@@ -333,7 +333,7 @@
         "key": 0,
         "question": "The Brooklyn 99 character that is most like me is... ",
         "answer": "What's Brooklyn 99??",
-        "tag": "No Tag",
+        "tag": "Front-facing",
         "imageurl": 0
     }, {
         "key": "When my friend shares that they are going through a tough season, I...  /Behind",
