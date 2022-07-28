@@ -125,7 +125,7 @@ like this! Find out more at https://vrsty.info/v-coders.
                     
                       </div>
                 </div>
-                <button v-if="index == questions.length-1" @click="goToResults()" class="w-full border border-black px-4 py-2 rounded mb-3 text-primary">View results</button>
+                <button id="resultsButton" v-if="index == questions.length-1" @click="goToResults(),vSparkles()" class="w-full border border-black px-4 py-2 rounded mb-3 text-primary">View results</button>
                 <button v-if="index != 0" @click="goToPrev(index)" class="text-xs text-primary">Go back</button>
             </div>
             <div id="results" class="container min-h-screen p-10 mx-auto flex flex-col lg:justify-center max-w-3xl">

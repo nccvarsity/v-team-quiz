@@ -2,6 +2,8 @@
 // Why don't you join the Varsity Coders team! Find out more at
 // https://vrsty.info/v-coders
 
+party.resolvableShapes["vLogo"] = `<img src="favicon-32x32.png"/>`
+
 function groupBy(array, key) {
   grouped = {};
   array.forEach(function (item) {
@@ -41,6 +43,23 @@ let questionsApi = "questions.json";
 let tagsApi = "tags.json";
 let teamTagsApi = "teamTags.json";
 let teamsApi = "teams.json";
+
+function vSparkles() {
+  setTimeout(function () {
+    party.sparkles(document.getElementById("results"), {
+      emitter: {
+        modules: [
+          new party.ModuleBuilder()
+            .drive("opacity")
+            .by(new party.NumericSpline({ time: 0, value: 0 }, { time: 0.5, value : 0.2 }, { time: 1, value : 0 }))
+            .build()
+        ]
+      },
+      shapes: ["vLogo"],
+      count: party.variation.range(25, 35),
+    });
+  }, 1000);
+}
 
 function getQuestions() {
   return axios.get(questionsApi);
@@ -238,22 +257,7 @@ axios
             this.teams.forEach(function (team) {
               ga("send", "event", "Quiz", "Result Team", team + " - " + i);
               i++;
-            }),
-              (party.resolvableShapes["vLogo"] = `<img src="favicon-32x32.png"/>`),
-              setTimeout(function () {
-                party.sparkles(document.getElementById("results"), {
-                  emitter: {
-                    modules: [
-                      new party.ModuleBuilder()
-                        .drive("opacity")
-                        .by(new party.NumericSpline({ time: 0, value: 0 }, { time: 0.5, value : 0.2 }, { time: 1, value : 0 }))
-                        .build()
-                    ]
-                  },
-                  shapes: ["vLogo"],
-                  count: party.variation.range(25, 35),
-                });
-              }, 1000);
+            })
           },
           openTeam: function (index) {
             if (this.teamOpened == index) {
