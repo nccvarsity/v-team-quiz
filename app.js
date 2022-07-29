@@ -124,6 +124,9 @@ axios
           document.getElementById("loading-btn").classList.add("hidden");
           document.getElementById("start").classList.remove("hidden");
           document.getElementById("quiz").classList.remove("hidden");
+          document.querySelectorAll("button").forEach(function(item) {
+            item.classList.add("border-black");
+          });
         },
         computed: {
           tags: function () {

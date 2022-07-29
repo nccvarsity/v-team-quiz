@@ -7,10 +7,11 @@ function flickSwitch() {
     document.querySelectorAll("ellipse, path").forEach(function(item, index) {
       setTimeout(function() {
         item.setAttribute("stroke", "white");
-      }, 30 * (index + 1));
+      }, 50 * (index + 1));
     });
     document.querySelectorAll("button").forEach(function(item) {
-      item.classList.toggle("border-black");
+      item.classList.remove("border-black");
+      item.classList.add("border-white");
     });
     try {
       document.getElementById("go-to-start").classList.replace("border-black", "text-primary");
@@ -22,11 +23,12 @@ function flickSwitch() {
     theme.href = "app.css";
     document.querySelectorAll("ellipse, path").forEach(function(item, index) {
       setTimeout(function() {
-        item.setAttribute("stroke", "black");
-      }, 30 * (index + 1));
+        item.setAttribute("stroke", "rgb(25,25,27)");
+      }, 50 * (index + 1));
     });
     document.querySelectorAll("button").forEach(function(item) {
-      item.classList.toggle("border-black");
+      item.classList.remove("border-white");
+      item.classList.add("border-black");
     });
     try {
       document.getElementById("go-to-start").classList.replace("border-black", "text-primary");
