@@ -24,15 +24,13 @@ like this! Find out more at https://vrsty.info/v-coders.
 
 <body>
     <div id="app">
-      <div class="container flex flex-col lg:justify-center p-10 mx-auto">
-        <div class="flex justify-end form-switch" id="dark">
-          <div style="padding-top: 4px; margin-right: 45px;">
-            <img src="sun.png" alt="sun" height="16px" width="16px" id="mode-link">
-          </div>
-          <input style="display: block" @click="flickSwitch(), flickAppSwitch()" class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch">
-        </div>
-    </div>
         <div id="loading" class="container h-screen flex flex-col lg:justify-center p-10 mx-auto max-w-3xl">
+          <div class="flex justify-end form-switch" id="dark">
+            <div style="padding-top: 4px; margin-right: 45px;">
+              <img src="sun.png" alt="sun" height="16px" width="16px" id="mode-link">
+            </div>
+            <input style="display: block" @click="flickSwitch(), flickAppSwitch()" class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch">
+          </div>
             <!-- V-arch logo in SVG! Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
             <svg viewbox="0 0 260 400" class="block max-w-full mx-auto mb-10" width="260" height="400">
                 <path id="svg_5" d="m39.621118,123.336283l187.23918,-0.44246l-55.650033,268.105628l-75.939108,0l-55.650039,-267.663167z" stroke-width="4" stroke="rgb(25,25,27)" fill="none" />

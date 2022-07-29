@@ -122,6 +122,14 @@ axios
         },
         mounted: function () {
           document.getElementById("loading-btn").classList.add("hidden");
+          document.querySelectorAll("ellipse, path").forEach(function(item) {
+            item.setAttribute("stroke", "#F7F7F7");
+        });
+        document.querySelectorAll("ellipse, path").forEach(function(item, index) {
+          setTimeout(function() {
+            item.setAttribute("stroke", "rgb(25,25,27)");
+          }, 50 * (index + 1));
+        });
           document.getElementById("start").classList.remove("hidden");
           document.getElementById("quiz").classList.remove("hidden");
           document.querySelectorAll("button").forEach(function(item) {
