@@ -32,7 +32,7 @@ like this! Find out more at https://vrsty.info/v-coders.
             <input style="display: block" @click="flickSwitch(), flickAppSwitch()" class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch">
           </div>
             <!-- V-arch logo in SVG! Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
-            <svg viewbox="0 0 260 400" class="block max-w-full mx-auto mb-10" width="260" height="400">
+            <svg viewbox="0 0 260 400" class="block max-w-full mx-auto mb-8" width="260" height="400">
                 <path id="svg_5" d="m39.621118,123.336283l187.23918,-0.44246l-55.650033,268.105628l-75.939108,0l-55.650039,-267.663167z" stroke-width="4" stroke="rgb(25,25,27)" fill="none" />
                 <ellipse ry="53.041437" rx="53.041437" id="svg_6" cy="229.129314" cx="61.649256" stroke-width="2" stroke="rgb(25,25,27)" fill="none" />
                 <path id="svg_7" d="m253.236087,278.112936l-26.955477,-0.152615l0,26.665641l-30.433612,0l0,28.694548l-32.172675,0l0,28.694548l-33.042207,0l0,28.694548" stroke-width="4" stroke="rgb(25,25,27)" fill="none" />
@@ -99,19 +99,19 @@ like this! Find out more at https://vrsty.info/v-coders.
                 <path id="svg_70" d="m168.076165,106.328102c-0.49995,1.95813 0.24997,3.6663 0.74992,4.74952c0.9999,1.43735 2.18728,2.06229 3.56214,2.62473" fill-opacity="null" stroke-width="null" stroke="rgb(25,25,27)" fill="none" />
             </svg>
             <h1 class="text-center text-3xl">MBTI</h1>
-            <p class="my-2">
-                We all know Martha loved serving... maybe a bit too much. What we can copy though is her spirit of excellence.
+            <p class="mt-2">
+                We all know Martha loved serving... maybe a bit too much.
             </p>
-            <p class="my-4">
-                Take the Martha of Bethany Team Indicator (MBTI) quiz and find out which serving team(s) suits you! Just remember to serve out of a spirit of rest!
+            <p class="my-2">
+                Take the Martha of Bethany Team Indicator (MBTI) and find out which serving team suits you! Just remember to serve out of a spirit of rest!
             </p>
             <div id="loading-btn" class="mt-24 w-full border border-black px-4 py-2 rounded mb-3 cursor-not-allowed opacity-80 bg-accent text-secondary text-center">Loading</div>
             <div id="start" class="hidden">
-                <h2 class="text-2xl mb-4">Tell us your name:</h2>
+                <h2 class="text-xl mb-4">Tell us your name:</h2>
                 <input type="text" v-model="name" class="appearance-none border border-black rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-5" autofocus />
                 <a href="#quiz" class="block w-full border border-black px-4 py-2 rounded mb-3 bg-accent text-secondary text-center">Take the quiz!</a>
-                <p>Or already have a team in mind?</p>
-                <button @click="location.href='https://bit.ly/3BrUwYb'" class="block w-full border border-black px-4 py-2 rounded mb-3 text-primary text-center">Join a team!</button>
+                <!-- <p>Or already have a team in mind?</p>
+                <button @click="location.href='https://bit.ly/3BrUwYb'" class="block w-full border border-black px-4 py-2 rounded mb-3 text-primary text-center">Join a team!</button> -->
             </div>
         </div>
         <div id="quiz" class="hidden">
